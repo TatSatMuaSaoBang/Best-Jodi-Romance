@@ -1,0 +1,441 @@
+{
+	"Format": "1.27.0",
+	
+	"Changes": [
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Jodi",
+			"FromFile": "assets/Characters/Jodi.png",
+			"ToArea": { "X": 0, "Y": 224, "Width": 64, "Height": 160 }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Jodi",
+			"FromFile": "assets/Portraits/Jodi.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Jodi_Beach",
+			"FromFile": "assets/Portraits/Jodi_Beach.png",
+			"ToArea": { "X": 0, "Y": 128, "Width": 64, "Height": 64 }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Jodi_Beach",
+			"FromFile": "assets/Characters/Jodi_Beach.png",
+			"ToArea": { "X": 0, "Y": 128, "Width": 16, "Height": 32 }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Maps/spring_outdoorsTileSheet",
+			"FromFile": "assets/Maps/Jodi_Patio_Spring.png",
+			"ToArea": { "X": 0, "Y": 1264, "Width": 48, "Height": 48 }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Maps/summer_outdoorsTileSheet",
+			"FromFile": "assets/Maps/Jodi_Patio_Summer.png",
+			"ToArea": { "X": 0, "Y": 1264, "Width": 48, "Height": 48 }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Maps/fall_outdoorsTileSheet",
+			"FromFile": "assets/Maps/Jodi_Patio_Fall.png",
+			"ToArea": { "X": 0, "Y": 1264, "Width": 48, "Height": 48 }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Maps/winter_outdoorsTileSheet",
+			"FromFile": "assets/Maps/Jodi_Patio_Winter.png",
+			"ToArea": { "X": 0, "Y": 1264, "Width": 48, "Height": 48 }
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/SpouseRooms",
+            "Entries": {
+                "Jodi": "SpouseRoomJodi/0"
+            }
+        },
+		{
+            "Action": "Load",
+            "Target": "Maps/SpouseRoomJodi",
+            "FromFile": "assets/Maps/SpouseRoomJodi.tmx"
+        },
+		{
+            "Action": "EditData",
+            "Target": "Data/SpousePatios",
+            "Entries": {
+                "Jodi": "SpousePatioJodi/0/19 19 19 20 20 20 21 21 21 22 22 22 23 23 23 23 23 23 23 22 22 22 22 22 22 21 21 21 21 21 21 20 20 20 20 20 20 20 20 21 21 21 22 22 22 22 22 22 21 21 21 21 21 21 20 20 20 20 19 19 19 19/0 -3"
+            }
+        },
+		{
+            "Action": "Load",
+            "Target": "Maps/SpousePatioJodi",
+            "FromFile": "assets/Maps/SpousePatioJodi.tmx"
+        },
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Fields": {
+				"Jodi": {
+					5: "datable"
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Fields": {
+				"Jodi": {
+					9: "Sam 'eldest_son' Vincent 'youngest_son' Kent 'ex-husband'"
+				},
+				"Kent": {
+					9: "Jodi 'ex-wife' Sam 'eldest_son' Vincent 'youngest_boy'"
+				}
+			},
+			"When": {
+				"Relationship:Jodi": "Married"
+			}
+		},
+		{
+         "Action": "EditData",
+         "Target": "Data/EngagementDialogue",
+         "Entries": {
+					"Jodi0": "I'm so excited!$l#$e#Oh this takes me back to when I was still young.$l",
+					"Jodi1": "I never thought I'd remarry...#$b#But I'm excited to do it all again with you.$l" ,
+			}
+		},
+		{
+			"Action": "Load",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"FromFile": "assets/Dialogue/MarriageDialogueJodi.json"
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"Good_5": "Hello there, honey bun. I have a surprise for you!#$b#I thought a gift would show how grateful I am better than words ever could. I hope you love it as much as I love you.$l[917 908 918 919 926 872 877 856 913 915]",
+				"Good_6": "Here @, I prepared you something tasty as a symbol of my love to you.$l[903 608 222 223 732 731 201 241 204 243 279]",
+			},
+			"When": {
+				"Hearts:Jodi": "14"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"winter_Tue6": "*sigh*... Sometimes I dream about life on my own... without a family to look after. Is that horrible?$s#$e#Don't tell anyone.$6",
+				"winter_Thu8": "We kind of rushed into our marriage, with Kent being a soldier and all... I hardly got a taste of youth and freedom, and now it's too late to ever go back.$s#$e#I can't believe I'm saying this to you.$6",
+				"winter_Fri6": "How about a quick snowball fight, @?#$e#I'm just kidding of course.$h",
+				"summer_Wed6": "Just the right weather to go for a swim, don't you think so?",
+				"fall_Tue6": "I hope you're making sure to eat enough.#$e#I'm sure working on a farm can be quite exhausting.",
+				"danceRejection": "Oh no, I'm too old to participate.$h",
+				"divorced": "Leave me alone!$a#$b#I can't believe I went through two divorces because of you...$s",
+				"dumped_Girls": "I'm too busy to talk with you.$a",
+				"secondChance_Girls": "I should probably act like the adult I am and stop holding petty grudges.$s",
+				"breakUp": "Oh... I understand @...$s#$b#Perhaps I'm too old for dating after all...$s",
+				"event_vbump0": "Well I'm glad to hear that.",
+				"event_vbump1": "See Vincent, even the nice farmer says you should listen to me.$h",
+				"event_vbump2": "Well, I think my parenting is none of your business.$u",
+				"event_caroline0": "Phew, that's a relief.#$b#Don't worry about it.$h",
+				"event_caroline1": "Ah well, I guess it's not that bad. Just forget what I said.$s",
+				"event_caroline2": "I take back everything I said about you then. I don't want to see you anymore.$8",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"2_1": "My ex-husband Kent is a soldier, working overseas. That's why he's not here right now.#$b#I know he'll come back safe once his tour is over!!#$e#Need something?",
+				"Mon2": "$d kent#Yesterday I visited Yoba's Altar to give thanks for Kent's safe return.|Yesterday I visited Yoba's Altar to ask for Kent's safe return.#$e#I'm trying to stay positive, but it's hard sometimes.$s"
+			},
+			"When": {
+				"Relationship:Jodi": "Married"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/animationDescriptions",
+			"Entries": {
+				"jodi_exercise": "Ungh... Breathe in.... Ungh.... Breathe out.$8",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromCSFiles",
+			"Entries": {
+				"Utility.cs.5371": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+				"Utility.cs.5377": "@... %spouse... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and..., well, wife!$h",
+			},
+			"When": {
+				"Spouse": "Jodi"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"jodiMessage": "Meet me on the mountain after dark. I need to talk with you. ^   -Jodi[#]Jodi's Note",
+				"jodiLeaving": "I've decided to go out and explore the world. I'll be back in a week, honey. ^   -Jodi[#]Jodi Leaving",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/CraftingRecipes",
+			"Entries": {
+				"Coffee Maker": "433 50 335 10 787 1 709 15/Home/246/true/null"
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/Events/SamHouse",
+            "Entries": {
+				"100/f Kent 750/p Kent/p Jodi": null,
+				"100/f Kent 750/p Kent/p Sam": "none/6 5/farmer 7 12 0 Sam 5 5 0 Kent 7 16 2/skippable/playSound cowboy_monsterhit/move farmer 0 -3 0/playSound cowboy_monsterhit/move farmer 0 -2 0/playSound cowboy_monsterhit/move farmer 0 -1 0/playSound cowboy_monsterhit/move farmer 0 -1 3/playSound cowboy_monsterhit/pause 200/faceDirection Sam 1/speak Sam \"Hi, @! I'm just making some popcorn.$h\"/pause 50/playSound cowboy_monsterhit/pause 79/playSound cowboy_monsterhit/pause 100/playSound cowboy_monsterhit/pause 26/playSound cowboy_monsterhit/pause 39/playSound cowboy_monsterhit/pause 50/playSound cowboy_monsterhit/pause 110/playSound cowboy_monsterhit/pause 59/playSound cowboy_monsterhit/speak Kent \"AAAAAHHHHHHH!!!$u\"/faceDirection Sam 2 true/faceDirection farmer 2 true/speed Kent 4/playSound cowboy_monsterhit/move Kent 0 -1 0/speed Kent 4/playSound cowboy_monsterhit/move Kent 0 -2 0/speed Kent 4/playSound cowboy_monsterhit/move Kent 0 -1 0/speed Kent 4/playSound cowboy_monsterhit/move Kent 0 -2 0/speed Kent 4/playSound cowboy_monsterhit/move Kent 0 -1 0/speed Kent 4/playSound cowboy_monsterhit/move Kent 0 -3 0/playSound cowboy_monsterhit/pause 50/playSound cowboy_monsterhit/pause 100/playSound cowboy_monsterhit/pause 80/playSound cowboy_monsterhit/speak Kent \"That sound...$s\"/playSound cowboy_monsterhit/pause 70/playSound cowboy_monsterhit/pause 100/playSound cowboy_monsterhit/pause 180/playSound cowboy_monsterhit/emote Kent 12/faceDirection Kent 3/speak Kent \"You should've known that sound would remind me of the war!$u\"/pause 50/playSound cowboy_monsterhit/pause 75/playSound cowboy_monsterhit/faceDirection Sam 0/playSound openBox/pause 400/faceDirection Sam 2/pause 500/playMusic desolate/faceDirection Kent 2/pause 800/showFrame Kent 16/pause 800/speak Kent \"...I lost a lot of good friends in those bloody trenches.$s\"/pause 800/emote Sam 28/pause 500/speak Sam \"But, dad... popcorn was always your favorite before you left.$s\"/pause 500/showFrame Kent 0/pause 500/pause 800/speak Kent \"...Things have changed.\"/pause 600/faceDirection Sam 1/pause 400/move Sam 1 0 1/speak Sam \"*whisper* @... can you say something to him?$s\"/pause 300/faceDirection farmer 3/pause 500/faceDirection farmer 2/pause 500/faceDirection Kent 0/pause 300/speak Kent \"$q 215 null#(Say something to Kent)$s#$r 215 -25 event_popcorn1#Sam's to blame... he should've known better!#$r 215 50 event_popcorn2#I know you're hurting... but don't blame your son.#$r 215 -50 event_popcorn3#(Lie) Blame me... I asked for popcorn\"/pause 900/faceDirection Kent 2/pause 700/emote Kent 28/pause 600/speak Kent \"...$s#$b#I'm sorry, Sam. You couldn't have known the sound of popcorn would make me upset.\"/pause 700/move Sam 0 1 1/speak Sam \"It's okay, dad.$s#$b#The last thing I want to do is make you upset. I'll do my best to keep your spirits up from now on.\"/pause 500/faceDirection Kent 3/pause 1000/end dialogue Kent \"I'm glad you're a friend of the family, @. Sorry about my behavior before.\""
+			},
+			"When": {
+				"Relationship:Jodi": "Married"
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "Entries": {
+				"63/y 2/t 600 1800/H": "continue/64 15/farmer 64 16 2 Kent 64 18 0/broadcastEvent/pause 1500/speak Kent \"Um, hello there. My name's Kent. I just got back last night... from overseas. Sam told me that a new farmer had moved in while I was gone.\"/pause 500/speak Kent \"Well, I just wanted to introduce myself... I'll see you around.\"/pause 300/end",
+			},
+			"When": {
+				"Relationship:Jodi": "Married"
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Kent",
+            "Entries": {
+				"event_popcorn1": "You keep quiet! Stop trying to turn me against my son.$u",
+				"Tue_inlaw_Jodi6": "I'm glad Jodi is happier now.#$e#We were just too impulsive back then.$s"
+			},
+			"When": {
+				"Relationship:Jodi": "Married"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Jodi",
+			"Entries": {
+				"marriage_Tue": "1000 SeedShop 22 17 1/1300 SeedShop 21 17 2 jodi_exercise/1600 SeedShop 24 14 2 \"Strings\\schedules\\Jodi:Tue.000\"/1800 BusStop -1 23 3",
+			},
+			"When": {
+				"Relationship:Jodi": "Married",
+				"Weather": "Sun, Snow, Wind"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {
+				"79480007/f Jodi 2500/x jodiMessage": "null"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/Town",
+			"Entries": {
+				"79480000/f Jodi 500/p Jodi/p Vincent": "jaunty/39 81/farmer 39 81 1 Vincent 28 90 1 Jodi 25 81 1/skippable/speed Vincent 5/move Vincent 0 -9 1/speed Vincent 5/move Vincent 10 0 1/jump Vincent/playSound clubSmash/startJittering/pause 1000/stopJittering/pause 500/faceDirection farmer 3/speak Vincent \"Ouch... Sorry mister.$s^Ouch... Sorry miss.$s\"/pause 500/speed Jodi 4/move Jodi 12 0 1/pause 200/faceDirection Vincent 3/speak Jodi \"Vincent! I told you not to run off!$a\"/emote Vincent 28/speak Jodi \"$q 794800001 null#Are you okay, @?#$r 794800001 0 event_vbump0#I'm alright, nothing to worry about.#$r 794800001 10 event_vbump1#You should listen to your mother, Vincent, both of us could have gotten hurt.#$r 794800001 -30 event_vbump2#I think you need to watch your kids better.\"/move Jodi -7 0 1 true/move Vincent -7 0 1 true/globalFade/viewport -1000 -1000/end dialogue Jodi \"Sorry for that mishap again.\"",
+				"79480003/f Jodi 1500/p Jodi/z spring/z summer/z fall": "none/26 22/farmer 34 23 0 Jodi 26 22 2/skippable/showFrame Jodi 18/positionOffset Jodi 0 -30/pause 200/emote Jodi 28/pause 600/move farmer 0 -1 3/move farmer -6 0 3/pause 200/speak Jodi \"Oh... Hello, @. You're probably wondering what I'm doing here on my own.$s\"/showFrame Jodi 0/jump Jodi/positionOffset Jodi 0 5/pause 5/positionOffset Jodi 0 5/pause 5/positionOffset Jodi 0 5/pause 5/positionOffset Jodi 0 5/pause 5/positionOffset Jodi 0 5/pause 5/positionOffset Jodi 0 5/pause 700/showFrame Jodi 31/pause 200/playMusic echos/pause 400/speak Jodi \"You see, Kent and I rushed into our marriage when we were still pretty young.$s#$b#I feel like I didn't get to fully live out my youth since I was busy with chores and our kids.$s#$b#I barely did the things I love anymore, like playing in the snow for example.$s#$b#I used to have so much fun whenever it snowed. I still love it but I just don't have the time for it anymore.$s\"/question fork0 \"#How about we build a snowman then?.#Perhaps you should stop thinking about the past.\"/fork snowman/stopMusic/speak Jodi \"I guess you're right.$s#$b#I can't change the past anymore so why bother thinking about it?$s\"/move Jodi -10 0 2 true/globalFade/viewport -1000 -1000/end dialogue Jodi \"Perhaps I should just accept reality.$s\"",
+				"snowman": 	"stopMusic/friendship Jodi 100/showFrame Jodi 0/pause 100/speak Jodi \"That sounds lovely.\"/globalFade 0.007 true/advancedMove Jodi true -5 0 2 2000/move farmer -5 0 2 true/pause 2000/viewport -1000 -1000/stopAdvancedMoves/pause 300/warp farmer 16 34/warp Jodi 18 34/addBigProp 17 34 51/faceDirection farmer 1/faceDirection Jodi 3/animate Jodi true true 800 29 30/showFrame 89/positionOffset farmer 8 20/pause 2500/globalFadeToClear 0.007 true/viewport 17 34/pause 750/playSound snowyStep/pause 1500/playsound snowyStep/pause 500/speak Jodi \"Thank you, @.\"/playMusic musicboxsong/pause 1500/speak Jodi \"This was the most fun I've had in a long time.#$b#I'm glad I got to do this with you.$l\"/pause 100/emote farmer 32 true/pause 300/playSound snowyStep/globalFade/viewport -1000 -1000/end dialogue Jodi \"Thanks a lot for earlier.#$e#Maybe we should do that again sometime.\"",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/SamHouse",
+			"Entries": {
+				"79480001/f Jodi 1000/p Jodi": "playful/7 4/farmer 7 12 0 Jodi 6 5 2/skippable/animate Jodi false true 200 16 17/pause 500/emote Jodi 12/pause 1000/move farmer 0 -5 3/move farmer -1 0 0/pause 1500/stopAnimation Jodi/pause 500/speak Jodi \"Oh! Hello there.#$b#I'm just taking care of the daily chores.#$b#*sigh*... Sometimes I wish Sam and Vincent would help me out but I can't bring myself to force them either.$s\"/question fork0 \"#I'd be happy to help you out.#Good luck with the rest of your chores.\"/fork helpJodi/speak Jodi \"Thanks, I'll go back to work then.$s\"/move farmer 1 0 2/move farmer 0 6 2 true/globalFade/viewport -1000 -1000/end dialogue Jodi \"Sorry, I'm still busy with chores.$s\"",
+				"helpJodi": "friendship Jodi 50/speak Jodi \"Really?$7#$b#Oh thank you so much!$h#$b#It would really help me if you just took this trash out.\"/move Jodi 0 1 2/playSound slimeHit/pause 700/emote Jodi 20 true/pause 50/move farmer 1 0 2/move farmer 0 6 2 true/globalFade/viewport -1000 -1000/end dialogue Jodi \"Thanks for the help.\"",
+				"794800015/f Kent 1500/p Kent/O Jodi": "none/4 16/farmer -100 -100 0 Kent 4 15 1/skippable/pause 700/warp farmer 4 23/playSound woodyStep/pause 300/faceDirection Kent 2/pause 500/speak Kent \"Hello, @. Could I talk with you for a minute?\"/emote farmer 8 true/move farmer 0 -6 0/pause 700/speak Kent \"It's about Jodi. I'm sure you expected me to bring it up eventually.#$b#I just wanted to tell you that...$s#$b#I'm actually fine with the fact that she married you.\"/pause 400/showFrame Kent 16/pause 700/speak Kent \"I may not be the most emotionally intelligent guy, but even I knew that Jodi wasn't happy with our marriage.$s#$b#We rushed into our marriage too quickly and it had a lot of ramifications for her.$5#$b#I'm just glad she's happier now, thank you.$h\"/globalFade/viewport -1000 -1000/end dialogue Kent \"You're a good guy, @.$h^You're a good woman, @.$h\"",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/SeedShop",
+			"Entries": {
+				"79480004/f Jodi 2000/p Jodi/p Caroline": "breezy/35 9/farmer 30 13 1 Jodi 35 9 1 Caroline 36 9 3/skippable/pause 1000/speak Jodi \"Have you met the farmer that recently moved here yet?#$b#They're just incredibly good-hearted and helpful.$h#$b#I'm starting to really like them.$l\"/pause 1000/move farmer 1 0 0/move farmer 0 -4 1/emote Caroline 16/speak Caroline \"Well, speak of the devil.$h\"/faceDirection Jodi 3/pause 400/emote Jodi 16 true/jump Jodi 7/pause 600/speak Jodi \"@!$9\"/speak Jodi \"$q 794800000 null#Were you listening to us?#$r 794800000 0 event_caroline0#No, you were talking about something?#$r 794800000 0 event_caroline1#I did, but not on purpose...#$r 794800000 -50 event_caroline2#Every single word.\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Jodi \"Please just forget the whole thing.\"",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/Mountain",
+			"Entries": {
+				"79480005/t 2000 2400/n jodiMessage/f Jodi 2500": "spaceMusic/68 25/farmer 63 21 1 Jodi 68 24 2/changeSprite Jodi Beach/changePortrait Jodi Beach/move farmer 5 0 2/pause 1000/speak Jodi \"You are probably wondering why I wanted to speak with you.\"/faceDirection Jodi 0/pause 500/speak Jodi \"You see, I've been quite unhappy with my life recently.$s#$b#I didn't get to experience my youth and have been stuck being a housewife.$s#$b#Or at least that's what I thought. You showed me that it doesn't have to be like this, that I can do what I want to do.#$b#And along the way I... grew to like you.$l#$b#So I decided that today I want to do something I've wanted to do for a long time... together with you. Swim down the Pelican Town river.\"/question fork1 \"So what do you say?#I'll gladly be at your side.#Sorry, I don't think I'm interested.\"/fork rejectJodi/pause 500/speak Jodi \"I'm glad to hear that.$l#$b#Let's get going then.\"/fade/viewport -1000 -1000/warp Jodi 73 28/warp farmer 70 28/faceDirection Jodi 3/faceDirection farmer 1/swimming Jodi/swimming farmer/pause 700/playSound dropItemInWater/pause 600/playSound dropItemInWater/pause 2500/fade unfade/viewport 72 29/pause 1000/speak Jodi \"I have to admit, I'm nervous...$l#$b#But I don't think I have anything to fear with you here.\"/move Jodi 0 1 2/playSound slosh/faceDirection farmer 2 true/globalFade 0.007 true/move Jodi 0 5 2 true/pause 2000/halt/viewport -1000 -1000/changeLocation Town/warp farmer 79 76/warp Jodi 81 66/faceDirection farmer 1 true/faceDirection Jodi 2 true/pause 500/globalFadeToClear 0.007 true/viewport 77 69/move Jodi 0 3 2 false/playSound slosh/globalFade 0.007 true/move Jodi 0 5 2 true/pause 2000/halt/viewport -1000 -1000/changeLocation Beach/pause 400/warp farmer 60 16/warp Jodi 59 16/positionOffset Jodi 0 -18/faceDirection farmer 3 true/faceDirection Jodi 1 true/pause 100/globalFadeToClear 0.007 true/viewport 59 17/pause 1500/speak Jodi \"I'm happy that I could finally do that.#$b#And I'm even happier that I got to do it with you.$l\"/pause 1000/showFrame Jodi 16/pause 200/playSound slosh/positionOffset Jodi 2 0/pause 50/positionOffset Jodi 2 0/pause 50/positionOffset Jodi 2 0/pause 50/positionOffset Jodi 2 0/positionOffset farmer -2 0/pause 50/positionOffset Jodi 2 0/positionOffset farmer -2 0/pause 50/eyes 1 -10000/positionOffset Jodi 2 0/positionOffset farmer -2 2/pause 50/positionOffset Jodi 2 0/positionOffset farmer -2 0/pause 50/positionOffset Jodi 2 0/positionOffset farmer -2 0/pause 50/positionOffset Jodi 2 0/positionOffset farmer -2 0/pause 50/positionOffset Jodi 2 0/positionOffset farmer -2 0/specificTemporarySprite heart 60 16/pause 1200/globalFade/viewport -1000 -1000/pause 2000/stopSwimming farmer/stopSwimming Jodi/end warpOut",
+				"rejectJodi": "friendship Jodi -50/speak Jodi \"Oh, I... understand.$s\"/move farmer -10 0 3 true/globalFade/viewport -1000 -1000/warp farmer 1 13/end warpOut",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"79480006/f Jodi 3500/O Jodi/t 1200 1800": "continue/6 7/farmer 8 5 3 Jodi 4 5 0/makeInvisible 4 5 5 2/pause 500/move farmer -2 0 3/faceDirection Jodi 1/pause 500/speak Jodi \"Right on time, dear. I just got back from my old home as well.$h#$b#We decided to tidy up our old stuff, now that so much has changed in all our lives.#$b#In the process, I dug up this old coffee maker manual, maybe you can learn something from it!$7\"/pause 100/playSound reward/addCraftingRecipe Coffee Maker/message \"You figured out how to craft a Coffee Maker!\"/pause 500/move farmer -1 0 3/animate Jodi false true 100 28/animate farmer true true 100 101/positionOffset farmer -16 0/specificTemporarySprite heart 5 5/globalFade/viewport -1000 -1000/end",
+			},
+			"When": {
+				"FarmhouseUpgrade": "1"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"79480006/f Jodi 3500/O Jodi/t 1200 1800": "continue/9 16/farmer 11 14 3 Jodi 7 14 0/makeInvisible 4 5 5 2/pause 500/move farmer -2 0 3/faceDirection Jodi 1/pause 500/speak Jodi \"Right on time, dear. I just got back from my old home as well.$h#$b#We decided to tidy up our old stuff, now that so much has changed in all our lives.#$b#In the process, I dug up this old coffee maker manual, maybe you can learn something from it!$7\"/pause 100/playSound reward/addCraftingRecipe Coffee Maker/message \"You figured out how to craft a Coffee Maker!\"/pause 500/move farmer -1 0 3/animate Jodi false true 100 28/animate farmer true true 100 101/positionOffset farmer -16 0/specificTemporarySprite heart 5 5/globalFade/viewport -1000 -1000/end",
+			},
+			"When": {
+				"FarmhouseUpgrade": "2, 3"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sam",
+			"Entries": {
+				  "spring_11.000": "Vincent hates going to the doctor more than anything, but he'll just have to deal with it.",
+				  "spring_11.001": "Be brave, Vincent. Think of dad.",
+				  "spring_11.002": "Doctor Harvey? I'm worried about Vincent's height. Isn't he a little short for his age?",
+				  "spring_11.003": "Vincent was very brave at the doctor's today. I'm proud of him."
+			},
+			"When": {
+				"Relationship:Jodi": "Married"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/schedules/Vincent",
+			"Entries": {
+				  "spring_11.001": "*gulp*... Sam, don't make me do it.$s"
+			},
+			"When": {
+				"Relationship:Jodi": "Married"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				  "spring_11": "900 SamHouse 15 13 0 \"Strings\\schedules\\Sam:spring_11.000\"/1130 Hospital 13 14 3 \"Strings\\schedules\\Sam:spring_11.001\"/1330 Hospital 2 7 1 \"Strings\\schedules\\Sam:spring_11.002\"/1600 SamHouse 12 22 3 \"Strings\\schedules\\Sam:spring_11.003\"/1900 SamHouse 22 16 1/2100 SamHouse 22 13 1 sam_sleep",
+			},
+			"When": {
+				"Relationship:Jodi": "Married"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Vincent",
+			"Entries": {
+				"Sun10_inlaw_Jodi": "Hi Dad!^Hi Mom!#$e#Don't tell Mom... but you're my favorite grown-up.$h"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sam",
+			"Entries": {
+				"summer_Tue_inlaw_Jodi": "I never realized how much work Mom did...#$e#Please tell her I said hi.",
+				"winter_Thu_inlaw_Jodi": "How's Mom doing?#$b#I hope you've been treating her well.$a#$e#I'm just messing with you.$h#$b#I trust you that everything's going great.",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"give_flowersA": "Are those really for me?$9#$b#I'll accept these! How could I refuse such a beautiful bouquet?$4",
+				"give_flowersB": "Yes, I want to be more serious too!$4#$b#I never thought you'd like an older girl like me.$h",
+				"give_pendant": "Yes! I'll accept this!$4#$b#The time we've spent together has been the happiest I've been since the beginning of my first marriage.$4#$b#I'm ready to finally turn my life around with you by my side.$4",
+				"stardrop_gift": "@, our marriage has been the happiest time of my life.$4#$b#I can't thank you enough for all the thing's you've done for me.",
+				"reject_two_heartA": "Oh no, I don't think so.$h#$b#You're nice but I'm still married.",
+				"reject_two_heartB": "I didn't know you had a sense of humor, @.$h#$b#You were just joking, right?",
+				"reject_four_heartA": "I didn't think putting on my favourite perfume today would be this effective.$h",
+				"reject_four_heartB": "No thank you.$6#$b#We're friends, just friends.",
+				"refusal_knownA": "You're a very good friend, @, but I don't know if I'm ready for something like that.$s",
+				"refusal_knownB": "Sorry, I think I need some more time to sort my thoughts.$s",
+				"refusal_botherA": "Cut it out, I already told you I need more time!$a",
+				"refusal_botherB": "I appreciate your eagerness, but I don't think force will get you very far.$6",
+			},
+			"When": {
+				"HasMod": "misscoriel.courtship"
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"spring_Wed8": "I wonder if anyone would say something if I skipped cleaning the house today...$s#$e#Who am I kidding? I would notice.$6",
+			},
+			"When": {
+				"HasMod": "gizzymo.canonfriendlyexpansion"
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27.xnb",
+			"Entries": {
+				"Jodi": "I'm sure Vincent only wants to go into the maze because Sam makes it seem like no big deal.$6#$e#I don't think he realizes what he'd be getting into.",
+			},
+			"When": {
+				"HasMod": "gizzymo.canonfriendlyexpansion",
+				"Year": "2"
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28.xnb",
+			"Entries": {
+				"Jodi":"Kent, I'm so glad you're home with us this year.",
+			},
+			"When": {
+				"HasMod": "gizzymo.canonfriendlyexpansion",
+				"Year": "2",
+				"Relationship:Jodi": "Married"
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27.xnb",
+			"Entries": {
+				"Jodi": "{{Random: I'm sure Vincent only wants to go into the maze because Sam makes it seem like no big deal.$6#$e#I don't think he realizes what he'd be getting into. @@ *yawn* ...Is it bedtime yet? The older I get, the less I can stay out late like this.$s |inputSeparator=@@}}",
+			},
+			"When": {
+				"HasMod": "gizzymo.canonfriendlyexpansion",
+				"Year |contains= 1, 2, 3": false
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"Mon2":"#$1 JodiAltar#Yesterday I visited Yoba's Altar to ask for my ex-husband's safe return.#$e#I'm trying to stay positive, but it's hard sometimes.$s",
+				"2_1":"My ex-husband Kent is a soldier, working overseas. That's why he's not here right now.#$b#I know he'll come back safe once his tour is over!#$e#Need something?",
+				"Sun_old":"$p 116#Thank you for your prayers for my ex-husband. It means a great deal to me.|My ex-husband is overseas in the war. Have I mentioned that?",
+				"Sun_116":"That's great. If you would, could you please pray for my ex-husband, Kent? Just for his safe return from the war.#$b#Thanks.",
+				"Sun_2":"I can't believe Kent is finally back!$h#$e#We should hang out more.",
+				"summer_Thu6_2":"Some days are difficult. But Kent is home, and difficult or not, I'm glad he's okay.#$e#I have to take time to be thankful for that.",
+				"fall_Sun8_2":"Oh! Sorry, can you repeat that? I'm so tired today, it's like my brain is underwater.",
+				"winter_Sun8_2":"Oh, what did you say? I'm sorry, I'm just so tired today!",
+			},
+			"When": {
+				"HasMod": "gizzymo.canonfriendlyexpansion",
+				"Relationship:Jodi": "Married"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Fields": {
+				"Jodi": {
+					9: "Sam 'daughter' Vincent 'son' Kent 'ex-husband'"
+				},
+				"Kent": {
+					9: "Jodi 'ex-wife' Sam 'daughter' Vincent 'son'"
+				}
+			},
+			"When": {
+				"HasMod": "invatorzen.idcsm",
+				"Relationship:Jodi": "Married"
+			}
+		},
+	]
+}
