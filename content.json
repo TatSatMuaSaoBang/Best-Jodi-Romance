@@ -477,10 +477,11 @@
 			"LogName": "Jodi: expanded everyday and marriage dialogue",
 			"Action": "Include",
 			"FromFile": "assets/Dialogue/JodiDialogueExpansion.json"
-	]
-},
+		},
 		{
 			"LogName": "Jodi: time-, location-, and object-triggered conversations",
 			"Action": "Include",
 			"FromFile": "assets/Dialogue/JodiPastConversations.json"
 		}
+	]
+}
