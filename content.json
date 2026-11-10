@@ -472,6 +472,10 @@
 			"LogName": "Jodi: family and children dialogue",
 			"Action": "Include",
 			"FromFile": "assets/Dialogue/JodiFamily.json"
+		},
+		{
+			"LogName": "Jodi: expanded everyday and marriage dialogue",
+			"FromFile": "assets/Dialogue/JodiDialogueExpansion.json"
 		}
 	]
 }
