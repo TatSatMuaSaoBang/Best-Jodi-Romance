@@ -19,7 +19,10 @@
         "winter_Fri4": "I've always wanted to travel somewhere warm in the middle of winter. Just once, I'd like to wake up and not have to find my gloves.",
         "winter_Sun8": "I wonder what I'd do with a whole week to myself. No shopping lists, no laundry, no one asking what's for dinner...#$b#I think I'd need a day just to decide.",
         "GreenRain": "Those trees look strange... I keep thinking Vincent might run outside to investigate. I've told him to stay in, but you know how curious he is.$s#$b#I'm glad you came by, @.",
-        "GreenRain_2": "Vincent asked whether the green rain would make the plants grow. I said I didn't know, and he told me we should watch them to find out.$h#$b#I think he gets his curiosity from me."
+        "GreenRain_2": "Vincent asked whether the green rain would make the plants grow. I said I didn't know, and he told me we should watch them to find out.$h#$b#I think he gets his curiosity from me.",
+        "SpouseStardrop": "Oh! You're sharing a Stardrop with me? That's far too precious a gift for little old me.$s#$b#I'll treasure it. Thank you, @.",
+        "Spouse_MonstersInHouse": "A monster?! In the house?!$6#$b#Stay behind me, honey... actually, perhaps I should stay behind you.",
+        "SpouseGiftJealous": "I know {0} is your friend, but seeing you give them {1} made me feel a little left out.$s#$b#Could I borrow some of your attention tonight?"
       },
       "When": {
         "HasFlag |contains=jodiPulledAway": false,
@@ -47,7 +50,10 @@
         "winter_Sat8": "I wanted to knock on your door today. I even had my hand raised.$s#$b#Then I remembered I don't know how to accept something good without waiting for it to disappear.",
         "winter_Sun8": "I think I've spent so long being afraid of making the wrong choice that I've forgotten I can make a choice for myself.$s#$b#That thought is both wonderful and terrifying.",
         "GreenRain": "I keep wanting to check on the boys, even though I know they're safe inside.$s#$b#I wish I could stop worrying for one day.",
-        "GreenRain_2": "The boys are fascinated by the green rain. I keep telling them to watch from the window.$s#$b#I suppose worrying is a habit I haven't learned to break."
+        "GreenRain_2": "The boys are fascinated by the green rain. I keep telling them to watch from the window.$s#$b#I suppose worrying is a habit I haven't learned to break.",
+        "SpouseStardrop": "I don't know how to put this into words. You gave me something precious, but it's the thought behind it that I keep returning to.$s#$b#Thank you for seeing me.",
+        "Spouse_MonstersInHouse": "A monster?! In our house?!$6#$b#Stay behind me, honey... actually, perhaps I should stay behind you.",
+        "SpouseGiftJealous": "I know {0} is your friend, but seeing you give them {1} made me feel a little left out.$s#$b#Could I borrow some of your attention tonight?"
       },
       "When": {
         "HasFlag": "jodiPulledAway",
@@ -75,7 +81,10 @@
         "winter_Sat10": "Come sit with me. I have a blanket, hot chocolate, and absolutely no intention of being productive tonight.$h#$e#You can help with the hot chocolate. That's your one job.",
         "winter_Sun10": "I want us to keep making plans, even silly ones. A garden bench, a trip to the coast, a bigger dinner table...#$b#A life should have things to look forward to.$l",
         "GreenRain": "The boys and I watched the strange rain from the window this morning. Vincent had about a hundred questions.$h#$b#I liked having everyone close.",
-        "GreenRain_2": "I used to feel helpless when something unexpected happened. Now I know we can face a strange day together.$l#$b#That makes all the difference."
+        "GreenRain_2": "I used to feel helpless when something unexpected happened. Now I know we can face a strange day together.$l#$b#That makes all the difference.",
+        "SpouseStardrop": "Every time I think life can't surprise me anymore, you prove me wrong.$l#$b#I'll treasure this. And I'll treasure you.",
+        "Spouse_MonstersInHouse": "Oh! A monster in the house? I thought we'd left that sort of excitement to the mines.$h#$b#Come on, love. Let's deal with it together.",
+        "SpouseGiftJealous": "So, you gave {1} to {0}, hmm?$h#$b#I'm not upset. I just think I deserve a kiss to remind me I'm your favorite."
       },
       "When": {
         "HasFlag": "jodiDevoted"
@@ -94,10 +103,7 @@
         "Good_9": "I want to be a good wife to you, but I don't want to turn it into another list of chores.$s#$b#Maybe tonight we can just be together.",
         "Rainy_Night_5": "The rain has been going for hours. Would you mind staying close tonight? I feel calmer when I can hear you breathing.$s",
         "funLeave_Jodi": "I'm going to see Caroline for a while. She said I should get out of the house and stop thinking so much.$s",
-        "funReturn_Jodi": "Caroline says I should be kinder to myself. I told her I'd try.$s#$b#She said she'd believe it when she sees it.",
-        "SpouseStardrop": "I don't know how to put this into words. You gave me something precious, but it's the thought behind it that I keep returning to.$s#$b#Thank you for seeing me.",
-        "Spouse_MonstersInHouse": "A monster?! In our house?!$6#$b#Stay behind me, honey... actually, perhaps I should stay behind you.",
-        "SpouseGiftJealous": "I know {0} is your friend, but seeing you give them {1} made me feel a little left out.$s#$b#Could I borrow some of your attention tonight?"
+        "funReturn_Jodi": "Caroline says I should be kinder to myself. I told her I'd try.$s#$b#She said she'd believe it when she sees it."
       },
       "When": {
         "HasFlag": "jodiPulledAway",
@@ -114,10 +120,7 @@
         "Good_6": "I want to learn something new with you. Dancing, fishing, even a language. Though I reserve the right to be terrible at it.$h",
         "Rainy_Night_5": "Come here, love. The rain can have the whole valley tonight. I only want this warm little corner with you.$l",
         "funLeave_Jodi": "I'm off to visit Caroline. We're going to catch up, laugh too loudly, and probably eat more cookies than we should.$h",
-        "funReturn_Jodi": "Caroline sends her love. She also says I should stop bragging about you. I told her that's an unreasonable request.$l",
-        "SpouseStardrop": "Every time I think life can't surprise me anymore, you prove me wrong.$l#$b#I'll treasure this. And I'll treasure you.",
-        "Spouse_MonstersInHouse": "Oh! A monster in the house? I thought we'd left that sort of excitement to the mines.$h#$b#Come on, love. Let's deal with it together.",
-        "SpouseGiftJealous": "So, you gave {1} to {0}, hmm?$h#$b#I'm not upset. I just think I deserve a kiss to remind me I'm your favorite."
+        "funReturn_Jodi": "Caroline sends her love. She also says I should stop bragging about you. I told her that's an unreasonable request.$l"
       },
       "When": {
         "HasFlag": "jodiDevoted"
