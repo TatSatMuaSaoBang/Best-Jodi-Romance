@@ -11,9 +11,7 @@
         "Hospital": "$query TIME 1130 1600#Vincent always says he isn't nervous before a check-up. Then he holds my hand so tightly I can barely feel my fingers.$h#$b#I suppose he gets that from me. I still get nervous whenever one of my boys needs a doctor.$s#$q 794801010/794801011/794801012 jodi_clinic_followup#Do you mind if I ask about being a mother?$r 794801010 0 jodi_clinic_vincent#Were you always this worried about Sam and Vincent?$r 794801011 0 jodi_clinic_young#Did having children so young change your plans?$r 794801012 0 jodi_clinic_self#Do you remember to look after yourself, too?|Harvey says I'm doing fine. I wish I could convince myself as easily as he convinces his patients.$h",
         "JojaMart_Wed": "$query TIME 1250 1700#I know Joja isn't everyone's favorite place, but when Kent was away I learned to compare every price. A few coins saved here and there mattered when I was buying for the whole family.$s#$b#I used to feel guilty if I spent anything on myself.$q 794801013/794801014/794801015 jodi_joja_followup#Would you like to ask me about keeping the household going?$r 794801013 0 jodi_joja_budget#Was it difficult managing the money while Kent was away?$r 794801014 0 jodi_joja_self#Did you ever buy something just for yourself?$r 794801015 0 jodi_joja_future#Did you imagine a different life back then?|I'm only here for a few things today. I made a list, and I'm determined not to come home with twice as much.$h",
         "JojaMart_Fri": "$query TIME 1250 1700#I used to know exactly how much everything cost. I could plan a week's meals just by looking at the prices.$s#$b#It was useful, but I don't miss having to think about every single coin quite so carefully.$q 794801013/794801014/794801015 jodi_joja_followup#Would you like to ask me about keeping the household going?$r 794801013 0 jodi_joja_budget#Was it difficult managing the money while Kent was away?$r 794801014 0 jodi_joja_self#Did you ever buy something just for yourself?$r 794801015 0 jodi_joja_future#Did you imagine a different life back then?|I should get these groceries home before I forget what I came for.$h",
-        "SamHouse": "$query TIME 2100 2200#The boys are finally settled for the night. It's strange how quiet the house becomes after all that noise.$s#$b#I used to complain about the mess they made. Now I sometimes miss finding their toys under the sofa.$h#$q 794801016/794801017/794801018 jodi_house_followup#Can I ask you something about raising Sam and Vincent?$r 794801016 0 jodi_house_chores#Why did you let the boys grow up without many chores?$r 794801017 0 jodi_house_protect#Were you afraid they were growing up too quickly?$r 794801018 0 jodi_house_balance#Did you ever wish someone would take care of you for a change?|I should check that Vincent is comfortable before I turn in. Goodnight, @.$h",
-        "GreenRain": "The boys are fascinated by the green rain. Vincent wants to go outside and Sam keeps pretending he isn't curious.$s#$b#I told them both to stay in. I know it's probably harmless, but being a mother means worrying first and asking questions later.$q 794801019/794801020/794801021 jodi_greenrain_followup#Would you like to ask me about the times I had to keep the boys calm?$r 794801019 0 jodi_greenrain_kent#Was it harder when Kent was away?$r 794801020 0 jodi_greenrain_boys#What were Sam and Vincent like when they were little?$r 794801021 0 jodi_greenrain_help#Can I help you keep them occupied.",
-        "GreenRain_2": "Another strange green morning... The boys are older now, but I still catch myself counting heads and checking every window.$s#$b#Some habits don't disappear just because the years pass.$q 794801019/794801020/794801021 jodi_greenrain_followup#Would you like to ask me about the times I had to keep the boys calm?$r 794801019 0 jodi_greenrain_kent#Was it harder when Kent was away?$r 794801020 0 jodi_greenrain_boys#What were Sam and Vincent like when they were little?$r 794801021 0 jodi_greenrain_help#Can I help you keep them occupied."
+        "SamHouse": "$query TIME 2100 2200#The boys are finally settled for the night. It's strange how quiet the house becomes after all that noise.$s#$b#I used to complain about the mess they made. Now I sometimes miss finding their toys under the sofa.$h#$q 794801016/794801017/794801018 jodi_house_followup#Can I ask you something about raising Sam and Vincent?$r 794801016 0 jodi_house_chores#Why did you let the boys grow up without many chores?$r 794801017 0 jodi_house_protect#Were you afraid they were growing up too quickly?$r 794801018 0 jodi_house_balance#Did you ever wish someone would take care of you for a change?|I should check that Vincent is comfortable before I turn in. Goodnight, @.$h"
       }
     },
     {
@@ -93,6 +91,47 @@
         "jodi_crispy_cooking": "$t JodiFamilyMeals 7#I did, but for a long time it felt like another responsibility. I'm trying to enjoy it again now, especially when I can cook something because I want to.$l",
         "JodiFamilyMeals": "I want cooking to feel like sharing something, not another chore I have to finish before bedtime. It's a small change, but it makes the kitchen feel different.$l"
       }
+    },
+    {
+      "LogName": "Jodi: Green Rain conversations, before she pulls away",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Entries": {
+        "GreenRain": "The boys are fascinated by the green rain. Vincent wants to go outside and Sam keeps pretending he isn't curious.$s#$b#I told them both to stay in. I know it's probably harmless, but being a mother means worrying first and asking questions later.$q 794801019/794801020/794801021 jodi_greenrain_followup#Would you like to ask me about how I handled those frightening days?$r 794801019 0 jodi_greenrain_kent#Was it harder when Kent was away?$r 794801020 0 jodi_greenrain_boys#What were Sam and Vincent like when they were little?$r 794801021 0 jodi_greenrain_help#Can I help you keep them occupied.",
+        "GreenRain_2": "Another strange green morning... The boys are fascinated, and I'm trying to remember that I don't have to solve every worry before breakfast.$s#$b#At least I have someone to talk to about it now.$q 794801019/794801020/794801021 jodi_greenrain_followup#Would you like to ask me about how I handled those frightening days?$r 794801019 0 jodi_greenrain_kent#Was it harder when Kent was away?$r 794801020 0 jodi_greenrain_boys#What were Sam and Vincent like when they were little?$r 794801021 0 jodi_greenrain_help#Can I help you keep them occupied."
+      },
+      "When": {
+        "HasFlag |contains=jodiPulledAway": false,
+        "HasFlag |contains=jodiDevoted": false
+      },
+      "UpdateRate": "OnLocationChange"
+    },
+    {
+      "LogName": "Jodi: Green Rain conversations, pulling-away phase",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Entries": {
+        "GreenRain": "The green rain is strange enough without me feeling so unsure of everything else.$s#$b#The boys are inside. I checked twice. I'm sorry, I don't have much to say today.$q 794801019/794801020/794801021 jodi_greenrain_followup#Would you like to ask me about those days?$r 794801019 0 jodi_greenrain_kent#Was it harder when Kent was away?$r 794801020 0 jodi_greenrain_boys#What were Sam and Vincent like when they were little?$r 794801021 0 jodi_greenrain_help#Can I help you keep them occupied.",
+        "GreenRain_2": "Another green-rain day. The boys are safe indoors. I wish I could be as certain about the rest of my life.$s#$q 794801019/794801020/794801021 jodi_greenrain_followup#Would you like to ask me about those days?$r 794801019 0 jodi_greenrain_kent#Was it harder when Kent was away?$r 794801020 0 jodi_greenrain_boys#What were Sam and Vincent like when they were little?$r 794801021 0 jodi_greenrain_help#Can I help you keep them occupied."
+      },
+      "When": {
+        "HasFlag": "jodiPulledAway",
+        "HasFlag |contains=jodiDevoted": false
+      },
+      "UpdateRate": "OnLocationChange"
+    },
+    {
+      "LogName": "Jodi: Green Rain conversations, devoted phase",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Entries": {
+        "GreenRain": "The boys are fascinated by the green rain, and this time I'm not trying to handle every worry by myself.$l#$b#It's a relief to have you here, @.$q 794801019/794801020/794801021 jodi_greenrain_followup#Would you like to ask me about those days?$r 794801019 0 jodi_greenrain_kent#Was it harder when Kent was away?$r 794801020 0 jodi_greenrain_boys#What were Sam and Vincent like when they were little?$r 794801021 0 jodi_greenrain_help#Can I help you keep them occupied.",
+        "GreenRain_2": "The rain is still strange, but I don't feel quite so helpless anymore. Sam and Vincent are safe, and I have someone beside me.$l#$b#That changes more than I expected.$q 794801019/794801020/794801021 jodi_greenrain_followup#Would you like to ask me about those days?$r 794801019 0 jodi_greenrain_kent#Was it harder when Kent was away?$r 794801020 0 jodi_greenrain_boys#What were Sam and Vincent like when they were little?$r 794801021 0 jodi_greenrain_help#Can I help you keep them occupied."
+      },
+      "When": {
+        "HasFlag": "jodiDevoted"
+      },
+      "UpdateRate": "OnLocationChange"
     }
   ]
 }
