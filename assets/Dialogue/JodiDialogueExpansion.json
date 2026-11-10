@@ -17,7 +17,9 @@
         "winter_Tue4": "I used to build the biggest snow forts in the neighborhood. My mother said I treated every snowfall like a personal invitation.$h#$e#I wonder if I could still manage one.",
         "winter_Thu6": "My back has been behaving today. I'm trying not to celebrate too early.$h#$b#Harvey says I should listen to my body. I suppose he has a point.",
         "winter_Fri4": "I've always wanted to travel somewhere warm in the middle of winter. Just once, I'd like to wake up and not have to find my gloves.",
-        "winter_Sun8": "I wonder what I'd do with a whole week to myself. No shopping lists, no laundry, no one asking what's for dinner...#$b#I think I'd need a day just to decide."
+        "winter_Sun8": "I wonder what I'd do with a whole week to myself. No shopping lists, no laundry, no one asking what's for dinner...#$b#I think I'd need a day just to decide.",
+        "GreenRain": "Those trees look strange... I keep thinking Vincent might run outside to investigate. I've told him to stay in, but you know how curious he is.$s#$b#I'm glad you came by, @.",
+        "GreenRain_2": "Vincent asked whether the green rain would make the plants grow. I said I didn't know, and he told me we should watch them to find out.$h#$b#I think he gets his curiosity from me."
       },
       "When": {
         "HasFlag |contains=jodiPulledAway": false,
@@ -43,7 +45,9 @@
         "winter_Mon8": "I passed a shop window and saw my reflection. For once I didn't count the lines around my eyes.$s#$b#I wondered what I might look like if I weren't always judging myself.",
         "winter_Thu8": "I miss being carefree. I also know I can't go back and become that girl again.$s#$b#Maybe I need to find out what a happy woman looks like now.",
         "winter_Sat8": "I wanted to knock on your door today. I even had my hand raised.$s#$b#Then I remembered I don't know how to accept something good without waiting for it to disappear.",
-        "winter_Sun8": "I think I've spent so long being afraid of making the wrong choice that I've forgotten I can make a choice for myself.$s#$b#That thought is both wonderful and terrifying."
+        "winter_Sun8": "I think I've spent so long being afraid of making the wrong choice that I've forgotten I can make a choice for myself.$s#$b#That thought is both wonderful and terrifying.",
+        "GreenRain": "I keep wanting to check on the boys, even though I know they're safe inside.$s#$b#I wish I could stop worrying for one day.",
+        "GreenRain_2": "The boys are fascinated by the green rain. I keep telling them to watch from the window.$s#$b#I suppose worrying is a habit I haven't learned to break."
       },
       "When": {
         "HasFlag": "jodiPulledAway",
@@ -69,7 +73,9 @@
         "winter_Mon10": "I used to dread quiet evenings. Now I look forward to them because I get to share one with you.$l",
         "winter_Wed10": "I caught my reflection in the window and smiled at the woman looking back.$h#$b#She seems a little braver than she used to be.",
         "winter_Sat10": "Come sit with me. I have a blanket, hot chocolate, and absolutely no intention of being productive tonight.$h#$e#You can help with the hot chocolate. That's your one job.",
-        "winter_Sun10": "I want us to keep making plans, even silly ones. A garden bench, a trip to the coast, a bigger dinner table...#$b#A life should have things to look forward to.$l"
+        "winter_Sun10": "I want us to keep making plans, even silly ones. A garden bench, a trip to the coast, a bigger dinner table...#$b#A life should have things to look forward to.$l",
+        "GreenRain": "The boys and I watched the strange rain from the window this morning. Vincent had about a hundred questions.$h#$b#I liked having everyone close.",
+        "GreenRain_2": "I used to feel helpless when something unexpected happened. Now I know we can face a strange day together.$l#$b#That makes all the difference."
       },
       "When": {
         "HasFlag": "jodiDevoted"
@@ -87,12 +93,11 @@
         "Good_8": "Sometimes I still wake up expecting to be alone. Then I remember where I am.$s#$b#It takes me a moment, but I'm getting better.",
         "Good_9": "I want to be a good wife to you, but I don't want to turn it into another list of chores.$s#$b#Maybe tonight we can just be together.",
         "Rainy_Night_5": "The rain has been going for hours. Would you mind staying close tonight? I feel calmer when I can hear you breathing.$s",
-        "NoBed_0": "I think we misplaced our bed... or the house did. Let's find somewhere comfortable and try not to make a fuss.$6",
-        "NoBed_1": "Well, this is inconvenient. I suppose we can improvise for one night.$s#$b#I'm trying to be cheerful about it. How am I doing?",
-        "NoBed_2": "I can't find our bed. I checked twice.$s#$b#Perhaps I should stop worrying and sit with you for a while.",
-        "NoBed_3": "No bed tonight? That's alright. I could use a little time to talk before we sleep.$s",
         "funLeave_Jodi": "I'm going to see Caroline for a while. She said I should get out of the house and stop thinking so much.$s",
-        "funReturn_Jodi": "Caroline says I should be kinder to myself. I told her I'd try.$s#$b#She said she'd believe it when she sees it."
+        "funReturn_Jodi": "Caroline says I should be kinder to myself. I told her I'd try.$s#$b#She said she'd believe it when she sees it.",
+        "SpouseStardrop": "I don't know how to put this into words. You gave me something precious, but it's the thought behind it that I keep returning to.$s#$b#Thank you for seeing me.",
+        "Spouse_MonstersInHouse": "A monster?! In our house?!$6#$b#Stay behind me, honey... actually, perhaps I should stay behind you.",
+        "SpouseGiftJealous": "I know {0} is your friend, but seeing you give them {1} made me feel a little left out.$s#$b#Could I borrow some of your attention tonight?"
       },
       "When": {
         "HasFlag": "jodiPulledAway",
@@ -108,12 +113,11 @@
         "Good_5": "I left a little note in your pocket. It says something very important. ...It says I love you.$l#$b#I didn't want you to go a whole day without knowing.",
         "Good_6": "I want to learn something new with you. Dancing, fishing, even a language. Though I reserve the right to be terrible at it.$h",
         "Rainy_Night_5": "Come here, love. The rain can have the whole valley tonight. I only want this warm little corner with you.$l",
-        "NoBed_0": "Our bed has vanished! Well, that's one way to make an ordinary evening interesting.$h#$b#Come sit with me while we figure it out.",
-        "NoBed_1": "No bed? Then I suppose we'll have to stay up talking. I can think of worse problems.$l",
-        "NoBed_2": "I checked every room. Not a bed in sight.$h#$b#Maybe the house is telling us to have a late-night picnic.",
-        "NoBed_3": "I was hoping for a cozy night beside you. We can manage that without a bed, can't we?$l",
         "funLeave_Jodi": "I'm off to visit Caroline. We're going to catch up, laugh too loudly, and probably eat more cookies than we should.$h",
-        "funReturn_Jodi": "Caroline sends her love. She also says I should stop bragging about you. I told her that's an unreasonable request.$l"
+        "funReturn_Jodi": "Caroline sends her love. She also says I should stop bragging about you. I told her that's an unreasonable request.$l",
+        "SpouseStardrop": "Every time I think life can't surprise me anymore, you prove me wrong.$l#$b#I'll treasure this. And I'll treasure you.",
+        "Spouse_MonstersInHouse": "Oh! A monster in the house? I thought we'd left that sort of excitement to the mines.$h#$b#Come on, love. Let's deal with it together.",
+        "SpouseGiftJealous": "So, you gave {1} to {0}, hmm?$h#$b#I'm not upset. I just think I deserve a kiss to remind me I'm your favorite."
       },
       "When": {
         "HasFlag": "jodiDevoted"
