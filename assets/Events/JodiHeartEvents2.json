@@ -1,0 +1,51 @@
+{
+	"Format": "2.5.0",
+	"Changes": [
+		{
+			"LogName": "Jodi: letter and rain scenes during the pull-away",
+			"Action": "EditData",
+			"Target": "Data/Events/SamHouse",
+			"Entries": {
+				"79480014/f Jodi 2000/p Jodi/n jodiPulledAway/k 79480005/t 900 1700": "echos/6 5/farmer 7 12 0 Jodi 6 5 0/skippable/pause 800/move farmer 0 -5 3/move farmer -1 0 0/pause 500/faceDirection Jodi 2/emote Jodi 16/pause 400/speak Jodi \"Oh! @... I wasn't expecting you.$6#$b#These? They're nothing. Old shopping lists.\"/pause 700/emote Jodi 28/pause 400/speak Jodi \"...That's a lie. They're letters. To you.$s#$b#I've written six this week and torn up every one. I start with 'Dear @' and then I can't say it.#$b#That I want to be near you and I want to run, both at once.\"/speak Jodi \"$q 794800014 null#Why can't I just say it?$s#$r 794800014 60 event_letter0#Say it badly. I'd rather hear it messy than not at all.#$r 794800014 40 event_letter1#Then give me the torn-up ones. I'll read the scraps.#$r 794800014 80 event_letter2#(Slide a clean sheet of paper across the table.)\"/pause 800/speak Jodi \"I'll try. I can't promise when.$s#$b#But I've stopped feeling like I have to hide the scraps from you.$l\"/globalFade/viewport -1000 -1000/end dialogue Jodi \"Thank you for not laughing at me.$s\"",
+				"79480015/f Jodi 2000/p Jodi/n jodiPulledAway/k 79480005/e 79480014/w rainy/t 1800 2100": "echos/6 5/farmer 7 12 0 Jodi 6 5 2/skippable/pause 1000/move farmer 0 -5 3/move farmer -1 0 0/pause 800/speak Jodi \"...Hi.$s\"/pause 1200/speak Jodi \"I don't have anything to say tonight.$s#$b#Would you mind just sitting here with me?\"/pause 800/message \"You sit with Jodi for a long while. Neither of you says anything. Rain taps on the window.\"/pause 2500/emote Jodi 20/pause 1500/speak Jodi \"Thank you.$l#$b#That was easier than talking.\"/friendship Jodi 100/globalFade/viewport -1000 -1000/end dialogue Jodi \"I think I'm starting to understand that you're not going anywhere.$l\""
+			}
+		},
+		{
+			"LogName": "Jodi: scene answers and topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"event_letter0": "Messy... I can do messy. I'm very good at messy.$h",
+				"event_letter1": "You'd read the scraps? ...That's the nicest thing anyone's offered in a long time.$s",
+				"event_letter2": "...$s#$b#A blank page. No rules. Just you.$l#$b#Give me a minute. I think I can do this.",
+				"JodiLetter": "I wrote a letter last night. A real one. It took until dawn and I didn't tear it up.$h#$b#I'm still not brave enough to hand it over. But it's written, and that's progress.$s",
+				"JodiRain": "I keep thinking about the rain the other night. Having someone sit next to me without needing me to be okay.$s#$b#I didn't know I wanted that until you did it."
+			}
+		},
+		{
+			"LogName": "Jodi: scene topics trigger",
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"79480014_Topic": {
+					"Id": "79480014_Topic",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 79480014",
+					"Actions": [
+						"AddConversationTopic JodiLetter 7"
+					],
+					"MarkActionApplied": true
+				},
+				"79480015_Topic": {
+					"Id": "79480015_Topic",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 79480015",
+					"Actions": [
+						"AddConversationTopic JodiRain 7"
+					],
+					"MarkActionApplied": true
+				}
+			}
+		}
+	]
+}

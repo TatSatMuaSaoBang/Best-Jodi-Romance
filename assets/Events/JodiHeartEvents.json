@@ -1,0 +1,97 @@
+{
+	"Format": "2.5.0",
+	"Changes": [
+		{
+			"LogName": "Jodi: heart events at Sam's house (empty nest, drawing, fever)",
+			"Action": "EditData",
+			"Target": "Data/Events/SamHouse",
+			"Entries": {
+				"79480010/f Jodi 1500/p Jodi/t 1700 2100": "echos/6 5/farmer 7 12 0 Jodi 6 5 0/skippable/pause 800/move farmer 0 -5 3/move farmer -1 0 0/pause 600/faceDirection Jodi 2/emote Jodi 28/pause 500/speak Jodi \"Oh... @. I didn't hear the door.$s#$b#Sorry. I was putting laundry away and I found Sam's old jacket. The one he wore every single day when he was eleven.$s\"/pause 400/speak Jodi \"For years I begged him to pick his things up off the floor. Now the house is so quiet I'd give anything to trip over one sock.$s#$b#Isn't that ridiculous?\"/speak Jodi \"$q 794800010 null#I'm a grown woman crying over a jacket.$s#$r 794800010 50 event_empty0#It isn't ridiculous. You love him.#$r 794800010 10 event_empty1#Maybe it's time to find something for yourself.#$r 794800010 100 event_empty2#(Sit down beside her and say nothing.)\"/pause 800/speak Jodi \"Everyone wants me to be fine. Fine, fine, fine.$s#$b#I've been somebody's mother since I was barely an adult. If I'm not that every minute of the day... who am I?$s\"/pause 700/speak Jodi \"Don't answer that. I just needed to say it out loud to someone.$s#$b#I think I picked you.\"/globalFade/viewport -1000 -1000/end dialogue Jodi \"Thank you for sitting with me. It helped more than you know.$l\"",
+				"79480011/f Jodi 1750/p Jodi/e 79480010/t 900 1500": "echos/6 5/farmer 7 12 0 Jodi 6 5 2/skippable/pause 800/move farmer 0 -5 3/move farmer -1 0 0/pause 500/speak Jodi \"Oh, @... come in. Sorry about the mess. Can I show you something?$s\"/pause 400/emote Jodi 28/pause 300/speak Jodi \"Vincent's teacher sent this home. They were supposed to draw their family.$s#$b#He drew me, Sam and himself. And right here, next to me... a gap. He drew his dad, then rubbed him out. The paper is almost worn through.\"/pause 700/speak Jodi \"Kent isn't a bad man. He just isn't... I don't know how to explain that to a little boy.$s#$b#I keep wondering if I did this to them. If I should have tried harder.\"/speak Jodi \"$q 794800011 null#Be honest with me, @. Did I ruin their childhood?$s#$r 794800011 60 event_draw0#No. They have a mother who cries over a drawing because she loves them that much.#$r 794800011 40 event_draw1#I don't know. But I know you're trying, and they can tell.#$r 794800011 -20 event_draw2#Kids get over things. Don't worry so much.\"/pause 800/speak Jodi \"I needed someone who wouldn't just say it's fine.$s#$b#I'm going to tell Vincent it's okay to miss his dad. That sometimes I miss the person I thought I was marrying, too.$s\"/globalFade/viewport -1000 -1000/end dialogue Jodi \"Thank you for listening. I'm not used to anyone asking about me.$s\"",
+				"79480012/f Jodi 2000/p Jodi/p Vincent/e 79480011/t 1500 2000": "echos/6 5/farmer 7 12 0 Jodi 6 5 3 Vincent 8 6 2/skippable/pause 800/move farmer 0 -5 3/move farmer -1 0 0/pause 400/faceDirection Jodi 0/emote Jodi 16/pause 300/speak Jodi \"@! Oh, thank goodness.$s#$b#Vincent has a fever. My hands are shaking, I can't think. Is he supposed to be this warm?\"/pause 300/emote Vincent 28/pause 300/speak Vincent \"I'm fine, Mom... *cough* ...just a little tired.\"/speak Jodi \"He always says he's fine. Just like his mother.$s\"/speak Jodi \"$q 794800012 null#I keep thinking I'm failing him. What should I do?$s#$r 794800012 60 event_fever0#Breathe. I'll stay with Vincent while you call Harvey.#$r 794800012 40 event_fever1#You're doing everything right. Let's get him water and rest.#$r 794800012 -20 event_fever2#It's just a fever. Kids get them all the time.\"/pause 800/speak Vincent \"Mom, don't cry. I'm okay. Honest.\"/speak Jodi \"I'm not crying. ...I'm crying a little.$s#$b#I just get so scared, sweetheart. When you're sick I forget everything I know.\"/pause 500/speak Vincent \"Thanks for coming, @. Mom was really worried.\"/speak Jodi \"Thank you for being here. I don't think I could have stayed calm on my own.$s\"/globalFade/viewport -1000 -1000/end dialogue Jodi \"He's sleeping now. Thank you for staying with us.$s\""
+			}
+		},
+		{
+			"LogName": "Jodi: after-the-river talk at the lake",
+			"Action": "EditData",
+			"Target": "Data/Events/Mountain",
+			"Entries": {
+				"79480013/f Jodi 3000/n jodiDevoted/t 1900 2300": "echos/68 25/farmer 63 21 1 Jodi 68 24 2/skippable/move farmer 5 0 2/move farmer 0 2 2/pause 1000/speak Jodi \"You found me again. You always seem to.$s#$b#I come here when I want to cry where nobody can hear. ...I used to, anyway.\"/pause 800/faceDirection Jodi 0/pause 400/speak Jodi \"I'm happy, @. I'm so happy it frightens me.$l#$b#The farm, you, the boys doing well... and I keep thinking, am I allowed? After everything?\"/speak Jodi \"I feel guilty. For Kent, for all the years I spent unhappy, for not being braver sooner.$s#$b#And then I feel guilty for feeling guilty. Isn't that ridiculous?$6\"/speak Jodi \"$q 794800013 null#Tell me I'm allowed.$s#$r 794800013 100 event_river0#You're allowed. You've earned every bit of it.#$r 794800013 100 event_river1#You can be happy and sad at the same time. I'm not going anywhere.#$r 794800013 120 event_river2#(Take her hand and just hold it.)\"/pause 800/playMusic musicboxsong/speak Jodi \"I used to think love was something you earned by being useful.$s#$b#With you, I just get to be.$l#$b#On the bad days, will you remind me?\"/pause 700/emote Jodi 20/pause 600/speak Jodi \"Take me home, love?$l\"/globalFade/viewport -1000 -1000/end dialogue Jodi \"Thank you for loving me, even when I made it hard.$l\""
+			}
+		},
+		{
+			"LogName": "Jodi: event answers and next-day topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"event_empty0": "That's exactly it... I love him so much it hurts.$s",
+				"event_empty1": "Something for myself...$s#$b#I wouldn't even know where to begin. But I'll think about it. Thank you.",
+				"event_empty2": "...$s#$b#*sniffle*... You're very good at this, you know that?$l",
+				"event_draw0": "...$s#$b#That's the kindest thing anyone has said to me in a long time.$l",
+				"event_draw1": "Trying. Yes. I can hold on to that.$s",
+				"event_draw2": "Maybe. I suppose I just worry. It's what I do.$s",
+				"event_fever0": "Harvey. Yes. Okay.$s#$b#Thank you for being clear when I couldn't be.",
+				"event_fever1": "Water, rest. Yes. I can do that.$s#$b#Thank you.",
+				"event_fever2": "Just a fever... You're right, I'm overreacting. I always do.$s",
+				"event_river0": "...$l#$b#I'll try to believe that.",
+				"event_river1": "Both at once. Yes. That's exactly how it feels.$l",
+				"event_river2": "...$l#$b#*sniffle* That's all I needed.",
+				"JodiEmptyNest": "I folded Sam's jacket and put it on the shelf where I can see it.$s#$b#I think I needed someone to see me cry about it. Thank you.$l",
+				"JodiDrawing": "I told Vincent it's okay to miss his dad. He cried, then I cried, then we ate cookies.$h#$b#I'm still not sure I said the right thing. But I said something.",
+				"JodiFever": "Vincent's fever broke. Harvey says he'll be fine in a few days.$h#$b#I'll probably panic again next time. But it helped that I wasn't alone.$s",
+				"JodiRiver": "I've been thinking about what I said at the lake.$l#$b#I'm going to stop apologizing for being happy. Starting soon. Maybe tomorrow.$h"
+			}
+		},
+		{
+			"LogName": "Jodi: river topic also works as a spouse",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"JodiRiver": "I've been thinking about what I said at the lake.$l#$b#I'm going to stop apologizing for being happy. Starting soon. Maybe tomorrow.$h"
+			}
+		},
+		{
+			"LogName": "Jodi: next-morning conversation topics",
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"79480010_Topic": {
+					"Id": "79480010_Topic",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 79480010",
+					"Actions": [
+						"AddConversationTopic JodiEmptyNest 7"
+					],
+					"MarkActionApplied": true
+				},
+				"79480011_Topic": {
+					"Id": "79480011_Topic",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 79480011",
+					"Actions": [
+						"AddConversationTopic JodiDrawing 7"
+					],
+					"MarkActionApplied": true
+				},
+				"79480012_Topic": {
+					"Id": "79480012_Topic",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 79480012",
+					"Actions": [
+						"AddConversationTopic JodiFever 7"
+					],
+					"MarkActionApplied": true
+				},
+				"79480013_Topic": {
+					"Id": "79480013_Topic",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 79480013",
+					"Actions": [
+						"AddConversationTopic JodiRiver 7"
+					],
+					"MarkActionApplied": true
+				}
+			}
+		}
+	]
+}

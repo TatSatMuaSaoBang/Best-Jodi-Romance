@@ -1,0 +1,222 @@
+{
+	"Format": "2.5.0",
+	"Changes": [
+		{
+			"LogName": "Jodi: child-count triggers and topics",
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"79480016_JodiHasKid": {
+					"Id": "79480016_JodiHasKid",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_CHILDREN Current 1",
+					"Actions": [
+						"AddMail Current jodiHasKid received",
+						"AddConversationTopic JodiNewBaby 7"
+					],
+					"MarkActionApplied": true
+				},
+				"79480017_JodiTwoKids": {
+					"Id": "79480017_JodiTwoKids",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_CHILDREN Current 2",
+					"Actions": [
+						"AddMail Current jodiTwoKids received",
+						"AddConversationTopic JodiSecondBaby 7"
+					],
+					"MarkActionApplied": true
+				}
+			}
+		},
+		{
+			"LogName": "Jodi: baby topics (default)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"JodiNewBaby": "I can't stop looking at %kid1. They're so small. I keep checking that they're still breathing.$6#$b#Is that normal?$s",
+				"JodiSecondBaby": "Two now. I'm exhausted and terrified and I wouldn't trade it for anything.$s"
+			}
+		},
+		{
+			"LogName": "Jodi: baby topics (devoted)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"JodiNewBaby": "I held %kid1 and cried like a child myself. Happy crying, the best kind.$l#$b#Thank you for giving me this.",
+				"JodiSecondBaby": "%kid1 is a big sibling now. I could burst with pride.$l"
+			},
+			"When": {
+				"HasFlag": "jodiDevoted"
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+		{
+			"LogName": "Jodi: before the baby, scared",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"Indoor_Day_3": "I caught myself picking out baby names this morning. Then I told myself I'm too old for that.$s#$b#...Aren't I?",
+				"Indoor_Night_4": "Do you ever think about having a baby, @? I think about it all the time and I'm too scared to ask.$s",
+				"Outdoor_3": "I watched Marnie's calves today and thought, what if? Then my back reminded me I'm not twenty anymore.$s",
+				"Good_3": "If we ever had a baby, I'd want to do it right this time. I just don't know if I can.$s#$b#I'd want you with me. If you're willing.",
+				"Good_4": "I'd be starting over at an age when most people are finished. Sometimes that terrifies me.$s#$e#But then I look at you and I want to try.",
+				"Rainy_Night_4": "Rain always reminds me of rocking Vincent to sleep. I miss that.$s#$b#Is it selfish to want it again?"
+			},
+			"When": {
+				"HasFlag": "jodiPulledAway",
+				"HasFlag |contains=jodiDevoted": false,
+				"HasFlag |contains=jodiHasKid": false
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+		{
+			"LogName": "Jodi: before the baby, devoted",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"Indoor_Day_3": "I've been daydreaming about baby names again. This time I'm not talking myself out of it.$h",
+				"Indoor_Night_4": "Let's have a baby, @. ...Whenever you're ready. I mean it.$l#$e#I just wanted you to know I want it too.",
+				"Outdoor_3": "I can picture a little one toddling between the crops, getting dirt on everything.$h#$b#And me chasing after them with a washcloth.",
+				"Good_3": "I'm older this time and my back is sorer and I couldn't be less afraid. Because it's you.$l",
+				"Good_4": "Sam and Vincent would be wonderful big brothers. Vincent would definitely teach them about spring onions.$h",
+				"Rainy_Night_4": "Cuddling in the rain and talking about someone who isn't here yet. I never thought I'd feel this lucky.$l"
+			},
+			"When": {
+				"HasFlag": "jodiDevoted",
+				"HasFlag |contains=jodiHasKid": false
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+		{
+			"LogName": "Jodi: during pregnancy, scared (needs jodiExpecting)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"Indoor_Day_0": "I feel strange this morning. Not bad strange. Just full of questions.$s",
+				"Indoor_Day_1": "My back aches, my feet are swollen, and I'm so scared of doing this wrong that I can't sit still.$s",
+				"Indoor_Day_2": "I sat down to rest and ended up crying. Hormones, I told myself. I don't think that's all of it.$s",
+				"Indoor_Day_3": "What if I'm too old? What if Sam and Vincent feel pushed aside? I keep making lists of everything that could go wrong.$s",
+				"Indoor_Day_4": "Please don't tell me I'm glowing. I feel like a swollen watermelon with anxiety.$6#$e#...Thank you for being patient with me.",
+				"Indoor_Night_0": "I felt something move today. I didn't know whether to laugh or cry, so I did both.$s",
+				"Indoor_Night_1": "Will you stay close tonight? I keep having bad dreams, and your voice is the only thing that stops them.$s",
+				"Indoor_Night_2": "I keep picturing myself at three in the morning, alone and exhausted. Then I remember you're here.$s",
+				"Indoor_Night_3": "My back is on fire. I'm trying not to complain. ...I'm complaining a little. Sorry.$s",
+				"Indoor_Night_4": "Thank you for rubbing my back. I don't know how to say what it means to be taken care of.$s"
+			},
+			"When": {
+				"HasFlag": "jodiExpecting",
+				"HasFlag |contains=jodiDevoted": false
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+		{
+			"LogName": "Jodi: during pregnancy, devoted (needs jodiExpecting)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"Indoor_Day_0": "Good morning, love! The baby kicked at sunrise. An early riser, just like you.$h",
+				"Indoor_Day_1": "My back hurts and my feet are swollen and I've never been happier. Isn't that funny?$h",
+				"Indoor_Day_2": "I've been knitting a tiny blanket. Badly. You didn't see it.$l",
+				"Indoor_Day_3": "I told Sam and Vincent. Vincent asked if the baby would like spring onions. Sam just hugged me for a long time.$h",
+				"Indoor_Day_4": "I keep catching myself with a hand on my belly, talking to them. I told them about you. They're lucky to have you.$l",
+				"Indoor_Night_0": "Come here, feel this! There. Did you feel the kick? That's our baby saying hello.$l",
+				"Indoor_Night_1": "I used to be scared of everything. Now I'm only scared of how much I already love them.$l",
+				"Indoor_Night_2": "Rub my back, please? I'll pay you in kisses and cookies.$h",
+				"Indoor_Night_3": "Whatever happens, we'll figure it out together. I know that now.$l",
+				"Indoor_Night_4": "Goodnight, you two. Yes, both of you. I'm talking to the baby as well.$h"
+			},
+			"When": {
+				"HasFlag": "jodiExpecting"
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+		{
+			"LogName": "Jodi: one child, scared",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"OneKid_0": "%kid1 smiled at me today and I nearly cried. A mother of three... who would have thought.$s",
+				"OneKid_1": "I'm so tired, but when %kid1 grabs my finger I forget everything else.$s#$e#I'm just afraid I'm doing it wrong.",
+				"OneKid_2": "My back is screaming from carrying %kid1 around, but I won't put them down. I'm sorry, I'm clingy.$s",
+				"OneKid_3": "Sam wants to meet %kid1 soon. I hope he doesn't feel I've moved on and left him behind.$s",
+				"OneKid_4": "Do you think I'm a good mother? Not just to %kid1. To all of them. I keep doubting it.$s"
+			},
+			"When": {
+				"HasFlag": "jodiPulledAway",
+				"HasFlag |contains=jodiDevoted": false
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+		{
+			"LogName": "Jodi: one child, devoted",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"OneKid_0": "%kid1 fell asleep on my chest this morning. I could have stayed there forever.$l",
+				"OneKid_1": "My back aches, my eyes are heavy, and I wouldn't change a thing.$h",
+				"OneKid_2": "Vincent asked to hold %kid1. He was so careful, like they were made of glass. I got teary.$h",
+				"OneKid_3": "Look at %kid1, @. They have your smile. I'm so glad.$l#$e#And my stubbornness, poor thing.$h",
+				"OneKid_4": "A second chance at being a mother, with you beside me. I never take it for granted.$l"
+			},
+			"When": {
+				"HasFlag": "jodiDevoted"
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+		{
+			"LogName": "Jodi: two children, scared",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"TwoKids_0": "%kid1 and %kid2 are finally asleep. I'm too tired to be anxious, which is a relief.$s",
+				"TwoKids_1": "I read about raising more than one child and spent an hour worrying I'd get everything wrong.$s",
+				"TwoKids_2": "My back is giving up on me. %kid1 wants to be carried and %kid2 wants to be carried. I'm outnumbered.$s",
+				"TwoKids_3": "Sometimes I count my kids and the number surprises me. Four. I still feel like someone who got lost.$s#$e#But I'm here. I'm trying.",
+				"TwoKids_4": "Thank you for staying. For %kid1, for %kid2, for me. I'm scared every day that you won't, and you keep showing up.$s"
+			},
+			"When": {
+				"HasFlag": "jodiPulledAway",
+				"HasFlag |contains=jodiDevoted": false
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+		{
+			"LogName": "Jodi: two children, devoted",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"TwoKids_0": "The house is quiet, %kid1 and %kid2 are asleep, and I'm leaning on the one I love. I'm happy.$l",
+				"TwoKids_1": "Perhaps I could ask Sam to babysit %kid1 and %kid2 so we can have a quiet dinner. I'd miss them within the hour.$h",
+				"TwoKids_2": "I used to think a big family was too much. Now I can't imagine our house any other way.$l",
+				"TwoKids_3": "My back says four kids is a lot. My heart says it's perfect.$h",
+				"TwoKids_4": "Look at them playing together. We did that.$l#$e#I'm so proud, @."
+			},
+			"When": {
+				"HasFlag": "jodiDevoted"
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+		{
+			"LogName": "Jodi: baby topics also in regular dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"JodiNewBaby": "I can't stop looking at %kid1. They're so small. I keep checking that they're still breathing.$6#$b#Is that normal?$s",
+				"JodiSecondBaby": "Two now. I'm exhausted and terrified and I wouldn't trade it for anything.$s"
+			}
+		},
+		{
+			"LogName": "Jodi: baby topics also in regular dialogue (devoted)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"JodiNewBaby": "I held %kid1 and cried like a child myself. Happy crying, the best kind.$l#$b#Thank you for giving me this.",
+				"JodiSecondBaby": "%kid1 is a big sibling now. I could burst with pride.$l"
+			},
+			"When": {
+				"HasFlag": "jodiDevoted"
+			},
+			"UpdateRate": "OnLocationChange"
+		}
+	]
+}

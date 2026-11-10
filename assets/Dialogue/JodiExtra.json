@@ -1,0 +1,299 @@
+{
+	"Format": "2.5.0",
+	"Changes": [
+
+		// ------------------------------------------------------------------
+		// STORY TRIGGERS
+		// Phase 1: opening up slowly (default)
+		// Phase 2: she gets scared at 9 hearts, pulls back one heart and avoids you (flag: jodiPulledAway)
+		// Phase 3: you said yes at the mountain river event, she is completely devoted (flag: jodiDevoted, set by the event itself)
+		// ------------------------------------------------------------------
+		{
+			"LogName": "Jodi: pull-away and devotion triggers",
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"79480008_JodiPullAway": {
+					"Id": "79480008_JodiPullAway",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current Jodi 2250",
+					"Actions": [
+						"AddFriendshipPoints Jodi -250",
+						"AddMail Current jodiPulledAway received",
+						"AddMail Current jodiDistance tomorrow",
+						"AddConversationTopic JodiPulledAway 7"
+					],
+					"MarkActionApplied": true
+				},
+				"79480009_JodiDevoted": {
+					"Id": "79480009_JodiDevoted",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current jodiDevoted Received",
+					"Actions": [
+						"AddMail Current jodiLoveLetter tomorrow",
+						"AddConversationTopic JodiDevoted 7"
+					],
+					"MarkActionApplied": true
+				}
+			}
+		},
+		{
+			"LogName": "Jodi: letters",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"jodiDistance": "Dear @,^I'm sorry I've been so distant lately. It isn't anything you did. I'm just scared, and I need a little time to catch my breath.^Please don't think I've stopped caring. I just don't know how to be brave yet.^   -Jodi[#]A Note from Jodi",
+				"jodiLoveLetter": "Dear @,^I'm writing this at the kitchen table, because I'm too shy to say it to your face.^You stayed. Even when I ran, even when I couldn't explain myself. I'm not afraid anymore. I want to be yours, every day, for as long as you'll have me.^Thank you for waiting for me.^   -Your Jodi[#]Jodi's Letter"
+			}
+		},
+
+		// ------------------------------------------------------------------
+		// PHASE 1: regular dialogue (hearts 4-8, before she pulls away)
+		// ------------------------------------------------------------------
+		{
+			"LogName": "Jodi: regular dialogue, phase 1",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"spring_Mon4": "Mondays. The laundry pile looks at me like it already knows I'm going to lose.$s#$e#Sorry, you didn't come here to hear me complain about socks.",
+				"spring_Wed4": "Ow... oh, hi, @. Don't mind me, it's just my back.$s#$b#I spent all morning hauling water and now I'm walking like Grandpa's old rocking chair.$h#$e#Harvey says I should rest. As if the house knows how to clean itself.",
+				"spring_Fri6": "Do you ever feel like everyone expects you to be a certain way? Cheerful, helpful, always available?$s#$b#I've been that for so long I'm not sure what's left when I stop.#$e#Anyway. Why am I telling you this?$6",
+				"spring_Thu8": "Can I ask you something, @? And please be honest.#$b#Why do you spend time with me? There are so many younger people in town who'd be easier to be around.$s#$e#Sorry. Forget I asked. I'm just not used to someone choosing me.",
+				"spring_Sat4": "I tried a new recipe today and burned the whole thing. Sam took one bite and said it was 'interesting'.$s#$e#The worst part is I wasn't even mad. I was just tired.",
+				"summer_Mon4": "I asked Sam and Vincent to help with the dishes. Do you know what I got? Two 'in a minute's.$a#$e#I love them. I do. But sometimes I'd like to be more than the person who keeps the house running.",
+				"summer_Tue6": "This heat makes my back flare up something awful.$s#$b#I tried stretching like Harvey showed me and I made a noise I'm still embarrassed about.$6#$e#You didn't hear that.",
+				"summer_Fri4": "Everyone at the store keeps asking how the boys are doing. Nobody ever asks how I'm doing.#$e#...Not that I'd know what to say.",
+				"summer_Sat8": "I caught myself smiling at nothing this morning, and then I felt guilty about it.$s#$b#Isn't that silly? Feeling guilty for being happy?#$e#It's what you do to me, @. I hope you know that.",
+				"fall_Mon4": "My to-do list has its own to-do list at this point.#$e#If I ever finish everything, I'll probably faint from the shock.$h",
+				"fall_Wed6": "I walked past Abigail and Penny today, laughing like they didn't have a care in the world.$s#$b#I used to laugh like that. I'd like to again.#$e#I just feel like I missed my turn.",
+				"fall_Thu4": "Harvey gave me another lecture about my back. 'Lift with your legs, Jodi.' 'Take breaks, Jodi.'$a#$b#I told him when I have a spare minute, I'll gladly take one.$h",
+				"fall_Sat6": "I found another gray hair this morning.$s#$b#I counted them, @. I actually counted them.#$e#Do you think I look... old? No, don't answer that. I'm not ready.",
+				"winter_Mon4": "Winter is hard on my bones. Getting out of bed every morning feels like negotiating with a stubborn mule.$s#$e#But the snow is pretty, at least.",
+				"winter_Wed6": "Some days I feel invisible. Like I'm part of the furniture.$s#$b#And then you walk in and say hello and I remember I'm a person.$l#$e#Thank you for that.",
+				"winter_Sat8": "I keep waiting for the moment you realize I'm not worth the trouble.$s#$b#I know that's an awful thing to say. It's just how my head works.#$e#So if you ever change your mind, please tell me. I'd rather know than hope."
+			},
+			"When": {
+				"HasFlag |contains=jodiPulledAway": false,
+				"HasFlag |contains=jodiDevoted": false
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+
+		// ------------------------------------------------------------------
+		// PHASE 2: she is scared and pulling away (hearts 8-10)
+		// ------------------------------------------------------------------
+		{
+			"LogName": "Jodi: regular dialogue, phase 2 (pulling away)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"JodiPulledAway": "...Oh. Hello, @.$s#$b#I can't talk today. I need some air. Please understand.",
+				"spring_Mon8": "Oh... hello, @. I'm a little busy today.$s#$e#I'll see you around, okay?",
+				"spring_Tue8": "I'm not avoiding you. ...I'm avoiding something. I just don't know how to say what.$s",
+				"spring_Fri8": "Every time I think I have it figured out, you show up and my thoughts scatter like startled chickens.$6#$b#It scares me, how much I want you to stay.$s",
+				"summer_Mon8": "I wrote you a letter and tore it up. Twice.$s#$b#I'm sorry I pulled away. I'm frightened of how fast this is going.#$e#Please be patient with me.",
+				"summer_Wed8": "I looked in the mirror this morning and tried to see what you see.$s#$b#I couldn't.#$e#I don't think that's your fault.",
+				"summer_Sat8": "If you're here to ask why I've been distant, I don't have a good answer yet.$s#$b#Just... don't give up on me. Please.",
+				"fall_Tue8": "My back's been terrible and my head's worse.$s#$b#It's strange. When I'm hurting, you're the first person I think of. And that's the part that frightens me.",
+				"fall_Thu8": "I've spent most of my life taking care of other people. Letting someone take care of me feels... wrong, somehow.$s#$e#But I'm trying. Slowly.",
+				"fall_Sat8": "I almost came to find you yesterday. I got halfway down the path before I lost my nerve and went back.$6#$e#Isn't that pathetic?",
+				"winter_Tue8": "You keep showing up. Even when I'm like this.$s#$b#Nobody's ever done that for me before.$l#$e#I don't know what to do with that.",
+				"winter_Fri8": "Part of me wants to run, and part of me wants to run to you.$s#$e#I'm exhausted from running, @.",
+				"spring_Wed10": "I think I'm finally ready to stop pretending I don't care.$s#$e#Give me a little more time to say it properly.",
+				"fall_Mon10": "You've been so patient with me. More than I deserve, honestly.$s#$b#I'm working on believing I deserve it.",
+				"winter_Wed10": "Something is changing in me, @. It's slow, but it's there.$l"
+			},
+			"When": {
+				"HasFlag": "jodiPulledAway",
+				"HasFlag |contains=jodiDevoted": false
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+
+		// ------------------------------------------------------------------
+		// PHASE 3: devoted (hearts 10+)
+		// ------------------------------------------------------------------
+		{
+			"LogName": "Jodi: regular dialogue, phase 3 (devoted)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"JodiDevoted": "I can't stop smiling today. People are staring. I don't care.$l#$e#Thank you for not giving up on me.",
+				"spring_Mon10": "Good morning, @! I made too much breakfast on purpose so I'd have a reason to bring you some.$h#$e#...I'm not very subtle, am I?",
+				"spring_Wed10": "I used to dread the days. Now I count the hours until I might see you.$l#$b#Is that too much to say out loud? I'm saying it anyway.",
+				"spring_Fri10": "My back hurts, my feet hurt, and I couldn't be happier. That's your doing too, you know.$h",
+				"spring_Sat10": "Harvey says my back is better. I told him it's because someone makes me stop and sit down.$h#$e#He gave me a look. I think he approves.",
+				"summer_Tue10": "I'm not scared of what people say anymore. Let them talk. I've got something worth talking about.$l",
+				"summer_Thu10": "I still have bad days, @. My back, my doubts, all of it.$s#$b#But now I know where I want to go when they hit.$l",
+				"summer_Fri10": "You looked at me today like I was the only person in the room. Do you know how long it's been since someone did that?$l#$e#Don't stop.",
+				"fall_Mon10": "I made a list of everything I'm grateful for. Your name ran out of room on the page.$h",
+				"fall_Wed10": "I don't feel old when I'm with you. I feel somewhere between the girl I was and the woman I've become.$l#$e#I like her.",
+				"fall_Fri10": "When I think about the person I was a year ago, I want to hug her. Then I want to tell her to be brave.$s#$b#I'm glad I finally listened to myself.",
+				"fall_Sat10": "Remember when I used to flinch every time you were nice to me? I'm almost over that.$h#$e#Almost.",
+				"winter_Tue10": "I'm warm even when it's snowing. That's your fault.$l#$e#Don't look so smug.",
+				"winter_Thu10": "I'd like to grow old with you, @. I know I'm already well on my way, but still.$h",
+				"winter_Fri10": "No more running from you. I decided. You're stuck with me.$l"
+			},
+			"When": {
+				"HasFlag": "jodiDevoted"
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+
+		// ------------------------------------------------------------------
+		// DIAMOND REACTION (Diamond is (O)72) + the follow-up conversation next day
+		// ------------------------------------------------------------------
+		{
+			"LogName": "Jodi: diamond gift, default",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"AcceptGift_(O)72": "$action AddConversationTopic JodiDiamond 7#A... a diamond?$u#$b#@, do you have any idea what this is worth?! Why would you give this to me?$9#$b#No one has ever given me anything like this. Not even...$s#$b#...Never mind. I'll keep it, but I need to sit down. My legs are shaking.$l",
+				"JodiDiamond": "I haven't stopped thinking about that diamond. I keep taking it out to look at it, then hiding it in case someone sees.$h#$b#Caroline asked why I was so jumpy. I told her I'd seen a mouse.$6#$e#Is it silly to be this happy about a rock? ...It isn't about the rock, you know."
+			}
+		},
+		{
+			"LogName": "Jodi: diamond gift, pulling away",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"AcceptGift_(O)72": "$action AddConversationTopic JodiDiamond 7#A diamond...?$u#$b#I can't accept this, @. I shouldn't.$s#$b#...Oh, who am I kidding, I'm taking it. But this is exactly what scares me. How am I supposed to deserve something like this?$6",
+				"JodiDiamond": "I keep that diamond in my pocket. It sits there, heavy, reminding me that someone sees me.$s#$b#I haven't decided yet whether that's wonderful or terrifying."
+			},
+			"When": {
+				"HasFlag": "jodiPulledAway",
+				"HasFlag |contains=jodiDevoted": false
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+		{
+			"LogName": "Jodi: diamond gift, devoted",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"AcceptGift_(O)72": "$action AddConversationTopic JodiDiamond 7#A diamond!$u#$b#You spoiled, wonderful person! I told you not to spend your money on me.$h#$b#...But I love it. And I love you for thinking of me. Look how my hands are shaking.$l",
+				"JodiDiamond": "Vincent asked about the sparkle on my dresser. I told him it's a present from someone who loves me.$l#$b#He gave me a funny look. Then a big smile."
+			},
+			"When": {
+				"HasFlag": "jodiDevoted"
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+
+		// ------------------------------------------------------------------
+		// MARRIAGE DIALOGUE
+		// Phase 2 (married, still scared) and phase 3 (married and devoted) override the base lines.
+		// The base MarriageDialogueJodi.json lines stay in use if neither flag is set.
+		// ------------------------------------------------------------------
+		{
+			"LogName": "Jodi: marriage dialogue, scared but trying",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"JodiPulledAway": "...Oh. Hello, honey.$s#$b#I'm sorry, I need a little air today. It's not you. I swear it's not you.",
+				"JodiDiamond": "I keep taking that diamond out of the drawer just to look at it. Then I put it back, so I won't get used to it.$s#$b#It's the nicest thing anyone's ever given me. I'm still working on believing I'm allowed to have it.",
+				"Rainy_Day_0": "Be careful out there, honey. I worry more than I let on when it rains.$s",
+				"Rainy_Day_1": "I made soup. I hope it's alright. I never know if what I make is good enough.[199 219 236 456 457]",
+				"Rainy_Day_2": "My back is stiff from the damp. I'll try to rest, but you know me, I can't sit still when I'm nervous.$s",
+				"Rainy_Day_3": "Do you ever wonder if you made a mistake marrying me? ...Forget I said that. It's just the rain talking.$s",
+				"Rainy_Day_4": "I told Sam I'm fine. He didn't believe me. I'm not sure I do either.$s",
+				"Rainy_Night_0": "You're home. Good. I keep half expecting you won't come back one day.$s#$e#I know that's not fair to you.",
+				"Rainy_Night_1": "I waited by the window. I'm sorry, that's clingy of me, isn't it?$6",
+				"Rainy_Night_2": "Would you sit with me? You don't have to talk. I just don't want to be alone with my thoughts tonight.$s",
+				"Rainy_Night_3": "I made you something warm. It's all I know how to do when I don't know what to say.[395 253 614]",
+				"Rainy_Night_4": "The rain is loud, and so is my head. But you're here, so it's a little quieter.",
+				"Indoor_Day_0": "I woke up early to make everything nice. I want you to feel like you made a good choice.$s",
+				"Indoor_Day_1": "Pancakes. I hope they're okay. I tried really hard on them.[211]",
+				"Indoor_Day_2": "I cleaned the same shelf three times. Anxious hands, you know.",
+				"Indoor_Day_3": "I almost asked Caroline if I'm a terrible spouse. Then I remembered how embarrassing that would be.$6",
+				"Indoor_Day_4": "Is there anything you need from me today? I'd feel better if I could do something right.",
+				"Indoor_Night_0": "Welcome home. Do you want to eat first, or...? Sorry, I'm fussing. I fuss when I'm scared.$s",
+				"Indoor_Night_1": "I cooked dinner. Please tell me honestly if it's bad.[231 198 200 205 214]",
+				"Indoor_Night_2": "My back is killing me tonight. Don't worry, I'm just complaining. Habit.$s#$e#I'm not used to having someone to complain to.",
+				"Indoor_Night_3": "Are you tired? I can turn the lights down. Whatever you want, dear.",
+				"Indoor_Night_4": "I keep waiting for the day you tell me you've had enough. Silly, right?$s#$e#Please don't actually say it.",
+				"Outdoor_0": "It's beautiful out here. I keep waiting for the catch.",
+				"Outdoor_1": "The fresh air helps my head. My back, not so much, but I'm managing.",
+				"Outdoor_2": "I'm not much help out here, am I? I'm sorry. I'll try harder tomorrow.$s",
+				"Outdoor_3": "Sometimes I walk around the farm just to remind myself it's real. That I live here. With you.",
+				"Outdoor_4": "Even the animals look happier than I feel. ...Sorry. That was dramatic.$6",
+				"Good_0": "You make me feel safe, @. I know I don't show it very well.$s",
+				"Good_1": "I'm still learning how to be loved. Please be patient with me.$s",
+				"Good_2": "I keep expecting to wake up and find out this was all a dream.$s#$e#But your hand is real. So I'll stay.",
+				"Good_3": "Thank you for choosing me every day. I know I'm not easy.$s",
+				"Good_4": "I like how you look at me. I just wish I knew what you see.$s",
+				"Neutral_0": "I'm tired today, in my back and in my heart. I'm sorry I'm not better company.$s",
+				"Neutral_1": "Do you need anything? I'm trying to be useful.$s",
+				"Bad_0": "I feel like I'm disappointing you. Tell me what I'm doing wrong, please.$s",
+				"Bad_1": "I'm scared we're drifting apart. I don't know how to fix it.$s",
+				"patio_Jodi": "It's strange having someone else do the work. I keep feeling like I should be helping.$s",
+				"spouseRoom_Jodi": "#$c .5#I'll just sit here and stretch. My back would thank you if you stopped working so hard.$h#$e#Sometimes I just need a quiet minute to remind myself I'm allowed to be here.",
+				"spring_Jodi": "A new year. I want to be a better partner this time.$s",
+				"summer_Jodi": "I'm trying not to wilt in this heat, or in my own doubts.$s",
+				"fall_Jodi": "The leaves are falling. I always feel a little like they do this time of year.",
+				"winter_Jodi": "Cold weather makes me want to hide inside. With you, though, I'd rather stay by the fire than hide."
+			},
+			"When": {
+				"HasFlag": "jodiPulledAway",
+				"HasFlag |contains=jodiDevoted": false
+			},
+			"UpdateRate": "OnLocationChange"
+		},
+		{
+			"LogName": "Jodi: marriage dialogue, devoted",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueJodi",
+			"Entries": {
+				"JodiDevoted": "I can't stop smiling today. Don't ask me why, you know why.$l",
+				"JodiDiamond": "I keep the diamond on the dresser where I can see it when I wake up. Every time I look at it I remember that you love me.$l#$b#As if I could forget.",
+				"Rainy_Day_0": "Be careful out there, my love. Come home safe and I'll have something warm waiting.$l",
+				"Rainy_Day_1": "I made soup for you. I put an extra helping of love in it.$h[199 219 236 456 457]",
+				"Rainy_Day_2": "My back's fussing about the rain, but I don't mind. I get to stay in and think about you.$h",
+				"Rainy_Day_3": "Rainy days used to make me sad. Now they just mean cuddling later.$l",
+				"Rainy_Day_4": "Sam called. I told him I've never been happier. He said he could hear it.$h",
+				"Rainy_Night_0": "There you are! Come here, you're soaked. Sit by the fire and let me fuss over you.$l",
+				"Rainy_Night_1": "I counted the minutes until you got home. Don't tell anyone how many.$h",
+				"Rainy_Night_2": "Sit with me. I just want your shoulder to lean on. My back thanks you.$l",
+				"Rainy_Night_3": "Drink this. I made it just for you. Anything for my favorite person.$l[395 253 614]",
+				"Rainy_Night_4": "Rain on the roof and you beside me. I couldn't ask for anything better.$l",
+				"Indoor_Day_0": "Good morning, love. I woke up before you just to watch you sleep. Don't judge me.$h",
+				"Indoor_Day_1": "Pancakes for my favorite person! I made extra so you won't go hungry.$h[211]",
+				"Indoor_Day_2": "I'll have the house sparkling for you tonight. You'd be amazed what love does for my energy. Not for my back, though.$h",
+				"Indoor_Day_3": "I watched The Queen of Sauce and wrote down a recipe just for you.$h",
+				"Indoor_Day_4": "Good morning, my dear. Today I'm trying something new in the kitchen. Please be proud of me.$h",
+				"Indoor_Night_0": "Welcome home, my love. I missed you terribly.$l",
+				"Indoor_Night_1": "Dinner's ready! I cooked all your favorites. Well, my favorites of yours.$h[231 198 200 205 214]",
+				"Indoor_Night_2": "My back aches but my heart is full. A fair trade, I think.$h",
+				"Indoor_Night_3": "Shall we call it a night? I want to fall asleep next to you.$l",
+				"Indoor_Night_4": "I still can't believe you're mine. I tell myself every night, just to hear it.$l",
+				"Outdoor_0": "I look at this farm and I see us. Isn't that wonderful?$h",
+				"Outdoor_1": "I don't mind the sweat, or my back, as long as it's beside you.$h",
+				"Outdoor_2": "Take a break, my love. I brought a snack and a very comfortable blanket.$h",
+				"Outdoor_3": "I used to wish I could run away. Now all I want is to stay.$l",
+				"Outdoor_4": "Every sunrise out here is a gift, and you're the best part of it.$l",
+				"Good_0": "I'm so proud to be yours, @.$l",
+				"Good_1": "You make me feel young again. And beautiful. Thank you.$l",
+				"Good_2": "I'd marry you again tomorrow. And the day after that.$l",
+				"Good_3": "My heart is yours, completely. Every ache and every wrinkle and all.$h",
+				"Good_4": "I love you, @. I'll never get tired of saying it.$l",
+				"Good_7": "I wrote you a love note and hid it in your pocket. Don't read it in front of anyone!$l",
+				"Good_8": "I never imagined a second chance at love could feel this good.$l",
+				"Good_9": "If anyone asks, I'm the happiest woman in the valley, and it's all because of you.$h",
+				"Neutral_0": "I'm a little tired today, but nothing a cuddle won't fix.$h",
+				"Neutral_1": "Don't worry about me. Just come home soon, okay?",
+				"Bad_0": "I miss you, even when you're right here. Let's spend time together soon.$s",
+				"Bad_1": "I'll always love you, even when things are hard. Please talk to me.$s",
+				"patio_Jodi": "It's so nice sitting here while you work. I'll admire the view. Of the farm, of course.$h",
+				"spouseRoom_Jodi": "#$c .5#I'm going to stretch and think of you. Don't let me stop you from being a hero.$l#$e#Sometimes I just sit here and remember how lucky I am.",
+				"spring_Jodi": "A new year with you. I couldn't be happier.$l",
+				"summer_Jodi": "Summer's here, my love. Let's have a picnic.$h",
+				"fall_Jodi": "The leaves are turning. Everything is beautiful, but you're the best view.$l",
+				"winter_Jodi": "Snow and a warm fire. And you. I'm the luckiest woman alive.$h"
+			},
+			"When": {
+				"HasFlag": "jodiDevoted"
+			},
+			"UpdateRate": "OnLocationChange"
+		}
+	]
+}
