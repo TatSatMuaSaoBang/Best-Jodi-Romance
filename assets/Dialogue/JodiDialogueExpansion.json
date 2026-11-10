@@ -1,0 +1,124 @@
+{
+  "Format": "2.5.0",
+  "Changes": [
+    {
+      "LogName": "Jodi: extra everyday dialogue, opening-up phase",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Entries": {
+        "spring_Tue6": "I tried making a proper breakfast instead of eating whatever was left in the pan.$h#$b#It was nice to sit down before the day got away from me. I should do that more often.",
+        "spring_Sun4": "I stopped by the chapel this morning. It's peaceful there before everyone starts talking.#$e#Sometimes a little quiet is all I need.",
+        "summer_Wed4": "The garden is growing faster than I can keep up with it.#$b#I used to think a bigger garden meant more freedom. Funny how that works.",
+        "summer_Thu6": "I made a list of things I'd like to do this summer. The first item is 'one afternoon with absolutely no chores'.$h#$b#I haven't crossed it off yet.",
+        "summer_Sun4": "The boys used to spend Sundays racing around the house. Now Sam sleeps in and Vincent wants to be outside all day.#$e#I miss the noise sometimes. Not all the noise, mind you.",
+        "fall_Tue6": "Caroline says I should try a new exercise routine. I told her my current routine is chasing laundry around the house.$h#$b#She didn't think that was very funny.",
+        "fall_Fri4": "The air smells like somebody's baking a pie. Now I'm thinking about dessert instead of the errands I still have to run.$h",
+        "fall_Sun8": "I was looking through old photographs today. I hardly recognized the girl in some of them.$s#$b#I don't dislike the woman I've become. I just wish I'd made a little more room for her along the way.",
+        "winter_Tue4": "I used to build the biggest snow forts in the neighborhood. My mother said I treated every snowfall like a personal invitation.$h#$e#I wonder if I could still manage one.",
+        "winter_Thu6": "My back has been behaving today. I'm trying not to celebrate too early.$h#$b#Harvey says I should listen to my body. I suppose he has a point.",
+        "winter_Fri4": "I've always wanted to travel somewhere warm in the middle of winter. Just once, I'd like to wake up and not have to find my gloves.",
+        "winter_Sun8": "I wonder what I'd do with a whole week to myself. No shopping lists, no laundry, no one asking what's for dinner...#$b#I think I'd need a day just to decide."
+      },
+      "When": {
+        "HasFlag |contains=jodiPulledAway": false,
+        "HasFlag |contains=jodiDevoted": false
+      },
+      "UpdateRate": "OnLocationChange"
+    },
+    {
+      "LogName": "Jodi: extra everyday dialogue, pulling-away phase",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Entries": {
+        "spring_Thu8": "I almost told Caroline about you yesterday. Then I changed the subject and asked about her tea plants.$s#$b#She's going to notice eventually. She notices everything.",
+        "spring_Sat8": "I keep telling myself to be sensible. Then I remember how happy I felt talking to you, and sensible starts to sound terribly lonely.$s",
+        "spring_Sun8": "I went to the chapel and tried to sort out my thoughts. I came home with more questions than I left with.$s#$b#I suppose that's still something.",
+        "summer_Tue8": "I saw a couple dancing in the town square. I used to love dancing.$s#$b#I can't decide whether I miss the dancing or just being looked at like that.",
+        "summer_Thu8": "I keep making excuses to stay busy. A clean counter, folded towels, another errand...#$b#It's easier to finish a task than to admit I'm frightened of what I want.",
+        "summer_Fri8": "Caroline asked why I've been so distracted. I told her it was the heat.$s#$b#She raised one eyebrow. I don't think she believed me.",
+        "summer_Sun8": "I sat outside for an hour and didn't do a single useful thing.$s#$b#It felt wonderful for five minutes. Then I felt guilty for the next fifty-five.",
+        "fall_Wed8": "I found an old recipe card with my handwriting on it. I used to write little notes in the margins about who liked each dish.$s#$b#I wonder when I stopped writing things just because they made me happy.",
+        "fall_Fri8": "Sometimes I catch myself planning a future, and then I shut the thought away before it can become real.$s#$b#I'm trying to understand why hope feels so dangerous.",
+        "fall_Sun8": "I don't want you to think I'm asking you to fix my life. I have to do that part myself.$s#$b#I just wish I could let someone stand beside me while I try.",
+        "winter_Mon8": "I passed a shop window and saw my reflection. For once I didn't count the lines around my eyes.$s#$b#I wondered what I might look like if I weren't always judging myself.",
+        "winter_Thu8": "I miss being carefree. I also know I can't go back and become that girl again.$s#$b#Maybe I need to find out what a happy woman looks like now.",
+        "winter_Sat8": "I wanted to knock on your door today. I even had my hand raised.$s#$b#Then I remembered I don't know how to accept something good without waiting for it to disappear.",
+        "winter_Sun8": "I think I've spent so long being afraid of making the wrong choice that I've forgotten I can make a choice for myself.$s#$b#That thought is both wonderful and terrifying."
+      },
+      "When": {
+        "HasFlag": "jodiPulledAway",
+        "HasFlag |contains=jodiDevoted": false
+      },
+      "UpdateRate": "OnLocationChange"
+    },
+    {
+      "LogName": "Jodi: extra everyday dialogue, devoted phase",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Entries": {
+        "spring_Tue10": "I bought a little notebook for things I want us to do together. The first page is already full.$h#$b#Don't worry, I left room for your ideas. A little room.",
+        "spring_Thu10": "I told Caroline that I'm happy. She smiled before I even finished the sentence.$l#$b#I think she's been waiting a long time to hear me say it.",
+        "spring_Sun10": "I went to the chapel this morning and gave thanks for the life I'm building, not the one I thought I was supposed to have.$l#$b#That felt like an important difference.",
+        "summer_Mon10": "I have a confession, @. I sometimes take the long way home just because it gives me another minute to think about seeing you.$h#$e#I'm not sorry.",
+        "summer_Wed10": "Let's leave the housework for tomorrow and go somewhere. The beach, the mountains, anywhere.$l#$b#I want some memories that don't involve a shopping list.",
+        "summer_Sat10": "I wore my favorite dress today. Not for a festival or a special occasion. I just felt like looking pretty.$h#$b#You noticed, didn't you?",
+        "summer_Sun10": "I used to dream about taking a vacation and then immediately think of all the reasons I couldn't go.$l#$b#Now I'm thinking about where we should go first.",
+        "fall_Tue10": "Caroline asked whether I've been sleeping better. I told her yes, and she gave me that knowing smile again.$h#$b#I think I'll have to start inventing new answers.",
+        "fall_Thu10": "I made rhubarb pie today. The first slice is yours, naturally.$h#$b#The second is also yours, but only if you say something nice about the crust.",
+        "fall_Sun10": "I don't want to spend the rest of my life only remembering what I missed.$l#$b#There's so much I still want to do, and I'd like to do it with you.",
+        "winter_Mon10": "I used to dread quiet evenings. Now I look forward to them because I get to share one with you.$l",
+        "winter_Wed10": "I caught my reflection in the window and smiled at the woman looking back.$h#$b#She seems a little braver than she used to be.",
+        "winter_Sat10": "Come sit with me. I have a blanket, hot chocolate, and absolutely no intention of being productive tonight.$h#$e#You can help with the hot chocolate. That's your one job.",
+        "winter_Sun10": "I want us to keep making plans, even silly ones. A garden bench, a trip to the coast, a bigger dinner table...#$b#A life should have things to look forward to.$l"
+      },
+      "When": {
+        "HasFlag": "jodiDevoted"
+      },
+      "UpdateRate": "OnLocationChange"
+    },
+    {
+      "LogName": "Jodi: extra marriage dialogue, pulling-away phase",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueJodi",
+      "Entries": {
+        "Good_5": "I made your favorite breakfast. I know you don't need me to prove I belong here...#$b#I'm still learning how to believe that myself.$s",
+        "Good_6": "Could we take a walk together later? I want to talk about something, but I think I'd rather do it somewhere quiet.$s",
+        "Good_7": "Caroline told me to stop apologizing every time I ask for a little affection.$6#$b#I'm trying. So... may I have a hug?",
+        "Good_8": "Sometimes I still wake up expecting to be alone. Then I remember where I am.$s#$b#It takes me a moment, but I'm getting better.",
+        "Good_9": "I want to be a good wife to you, but I don't want to turn it into another list of chores.$s#$b#Maybe tonight we can just be together.",
+        "Rainy_Night_5": "The rain has been going for hours. Would you mind staying close tonight? I feel calmer when I can hear you breathing.$s",
+        "NoBed_0": "I think we misplaced our bed... or the house did. Let's find somewhere comfortable and try not to make a fuss.$6",
+        "NoBed_1": "Well, this is inconvenient. I suppose we can improvise for one night.$s#$b#I'm trying to be cheerful about it. How am I doing?",
+        "NoBed_2": "I can't find our bed. I checked twice.$s#$b#Perhaps I should stop worrying and sit with you for a while.",
+        "NoBed_3": "No bed tonight? That's alright. I could use a little time to talk before we sleep.$s",
+        "funLeave_Jodi": "I'm going to see Caroline for a while. She said I should get out of the house and stop thinking so much.$s",
+        "funReturn_Jodi": "Caroline says I should be kinder to myself. I told her I'd try.$s#$b#She said she'd believe it when she sees it."
+      },
+      "When": {
+        "HasFlag": "jodiPulledAway",
+        "HasFlag |contains=jodiDevoted": false
+      },
+      "UpdateRate": "OnLocationChange"
+    },
+    {
+      "LogName": "Jodi: extra marriage dialogue, devoted phase",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueJodi",
+      "Entries": {
+        "Good_5": "I left a little note in your pocket. It says something very important. ...It says I love you.$l#$b#I didn't want you to go a whole day without knowing.",
+        "Good_6": "I want to learn something new with you. Dancing, fishing, even a language. Though I reserve the right to be terrible at it.$h",
+        "Rainy_Night_5": "Come here, love. The rain can have the whole valley tonight. I only want this warm little corner with you.$l",
+        "NoBed_0": "Our bed has vanished! Well, that's one way to make an ordinary evening interesting.$h#$b#Come sit with me while we figure it out.",
+        "NoBed_1": "No bed? Then I suppose we'll have to stay up talking. I can think of worse problems.$l",
+        "NoBed_2": "I checked every room. Not a bed in sight.$h#$b#Maybe the house is telling us to have a late-night picnic.",
+        "NoBed_3": "I was hoping for a cozy night beside you. We can manage that without a bed, can't we?$l",
+        "funLeave_Jodi": "I'm off to visit Caroline. We're going to catch up, laugh too loudly, and probably eat more cookies than we should.$h",
+        "funReturn_Jodi": "Caroline sends her love. She also says I should stop bragging about you. I told her that's an unreasonable request.$l"
+      },
+      "When": {
+        "HasFlag": "jodiDevoted"
+      },
+      "UpdateRate": "OnLocationChange"
+    }
+  ]
+}
