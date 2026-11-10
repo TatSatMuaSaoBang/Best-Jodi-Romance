@@ -100,11 +100,11 @@ Both stop appearing once event 79480005 (the lake) has been seen.
 
 # Dialogue expansion (assets/Dialogue/JodiDialogueExpansion.json)
 
-Added 65 dialogue lines while keeping the existing three-stage relationship arc intact.
+Added 68 dialogue lines while keeping the existing three-stage relationship arc intact.
 
-- **Opening-up phase:** 12 additional seasonal weekday lines, plus two Green Rain reactions.
-- **Pulling-away phase:** 14 seasonal weekday lines plus two Green Rain reactions about Jodi's uncertainty, boundaries, friendship with Caroline, and making room for herself.
-- **Devoted phase:** 14 warmer seasonal weekday lines plus two Green Rain reactions about shared plans, affection, travel, and enjoying life beyond household responsibilities.
-- **Marriage dialogue:** 19 additional lines across affection, rainy nights, spouse-specific interactions, and visits with Caroline. The scared and devoted versions remain gated by their existing flags.
+- **Opening-up phase:** 12 additional seasonal weekday lines, plus two Green Rain reactions and three spouse interaction reactions.
+- **Pulling-away phase:** 14 seasonal weekday lines plus two Green Rain reactions and three spouse interaction reactions about Jodi's uncertainty, boundaries, friendship with Caroline, and making room for herself.
+- **Devoted phase:** 14 warmer seasonal weekday lines plus two Green Rain reactions and three spouse interaction reactions about shared plans, affection, travel, and enjoying life beyond household responsibilities.
+- **Marriage dialogue:** 13 additional lines across affection, rainy nights, and visits with Caroline. The scared and devoted versions remain gated by their existing flags.
 
 These are dialogue-only additions; no new heart events, schedules, or pregnancy mechanics were introduced. In-game SMAPI testing is still needed.
