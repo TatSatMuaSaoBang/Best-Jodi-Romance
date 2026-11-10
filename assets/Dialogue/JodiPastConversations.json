@@ -72,7 +72,7 @@
         "JodiGreenRainMemory": "I don't think the boys needed a perfect mother. They needed someone who stayed close when they were scared. I hope I managed that.$s",
         "jodi_bass_followup": "That first dinner was a little nerve-racking, wasn't it? I was glad you came.$l",
         "jodi_bass_dinner": "$t JodiFirstDinner 7#I was. I wanted you to have a good evening with the family, and I worried about every little thing. I even checked the casserole twice before it was ready.$h",
-        "jodi_bass_kent": "$t JodiFirstDinner 7#Kent was home by then. There were parts of our life together that were still good, even when things were difficult. I don't want to pretend every memory was unhappy.$s",
+        "jodi_bass_kent": "$t JodiFirstDinner 7#$d kent#Kent was home by then. There were parts of our life together that were still good, even when things were difficult. I don't want to pretend every memory was unhappy.$s|Kent was still overseas. I wanted to make a good evening for you and the boys, and I remember being nervous about getting every little thing right.$s",
         "jodi_bass_cooking": "$t JodiFirstDinner 7#I used the fish for the casserole. I remember being so busy making sure everyone had enough that I barely sat down myself.$h#$b#Some habits take a while to change.",
         "JodiFirstDinner": "I remember that evening more fondly now. It was one of the first times I let someone new into our family routine, and you made it feel easy.$l",
         "jodi_pancake_followup": "Sam and Vincent were very different little boys. I learned quickly that one recipe never pleased both of them.$h",
