@@ -95,3 +95,16 @@ Both stop appearing once event 79480005 (the lake) has been seen.
 - Child-count triggers use the confirmed `PLAYER_HAS_CHILDREN` query, but the whole flow (birth night, next morning) still needs a test with a real save.
 - Replacing keys means one of the random daily lines is swapped for a family line, so she won't talk about children every day.
 - Not done yet: Kent's homecoming scene, anniversary event and porch talks.
+
+---
+
+# Dialogue expansion (assets/Dialogue/JodiDialogueExpansion.json)
+
+Added 61 dialogue lines while keeping the existing three-stage relationship arc intact.
+
+- **Opening-up phase:** 12 additional seasonal weekday lines, bringing the regular-life dialogue coverage closer to a full week in every season.
+- **Pulling-away phase:** 14 lines about Jodi's uncertainty, boundaries, friendship with Caroline, and learning to make room for herself.
+- **Devoted phase:** 14 warmer lines about shared plans, affection, travel, and enjoying life beyond household responsibilities.
+- **Marriage dialogue:** 21 additional lines across affection, rainy nights, missing-bed situations, and visits with Caroline. The scared and devoted versions remain gated by their existing flags.
+
+These are dialogue-only additions; no new heart events, schedules, or pregnancy mechanics were introduced. In-game SMAPI testing is still needed.
