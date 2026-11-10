@@ -108,3 +108,26 @@ Added 68 dialogue lines while keeping the existing three-stage relationship arc 
 - **Marriage dialogue:** 13 additional lines across affection, rainy nights, and visits with Caroline. The scared and devoted versions remain gated by their existing flags.
 
 These are dialogue-only additions; no new heart events, schedules, or pregnancy mechanics were introduced. In-game SMAPI testing is still needed.
+
+
+---
+
+# Past-focused, time- and item-triggered conversations (assets/Dialogue/JodiPastConversations.json)
+
+Added a new conversation layer built around Jodi's established history and routine. The dialogue is triggered by where/when the player speaks to her, or by specific gifts, and includes player questions using Stardew's built-in dialogue choices.
+
+## Time and location triggers
+- **Tuesday exercise class at Pierre's:** questions about Caroline, the exercise group, and Jodi finding time for herself.
+- **Sunday chapel visit:** conversations about Kent's deployment, waiting for letters, faith, and the emotional burden of managing the household alone.
+- **Spring clinic visits:** dialogue about Vincent's checkups, being a young mother, and remembering to care for herself.
+- **JojaMart on Wednesday/Friday:** the household budget while Kent was away and how Jodi learned to postpone her own needs.
+- **Late evening at home:** the boys' childhood, Jodi's choice to let them enjoy childhood without many chores, and the quiet after bedtime.
+- **Green Rain:** Jodi's instinct to keep Sam and Vincent safe, with different wording for the first and later years.
+
+## Object triggers
+Unique gift reactions for Largemouth Bass, Pancakes, Rhubarb Pie, Crispy Bass, Chocolate Cake, Eggplant Parmesan, Fried Eel, and Vegetable Medley; plus a birthday-gift conversation. The item reactions tie back to the dinner event, her family cooking, Sam and Vincent's childhood, and the memory of Granny's cottage. The existing Diamond story reaction remains untouched.
+
+## Player questions and follow-ups
+The new dialogue uses the built-in question/response commands and unique IDs. Chosen responses can start short-lived conversation topics, so Jodi can continue a story when the player speaks to her again. This reuses the question and conversation-topic patterns already present in the mod's heart events and gift dialogue.
+
+These are dialogue additions; they do not change Jodi's walking schedule or add new cutscenes. In-game verification is still needed for all location/time conditions and the exact gift reactions.
